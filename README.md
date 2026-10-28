@@ -6,4 +6,5 @@ Tên branch được đặt theo tên đơn vị, ví dụ:
   - SVAW
   - SEWS-CV
   - SVWS
+
 Sau khi hoàn tất cập nhật, push code lên branch tương ứng.
