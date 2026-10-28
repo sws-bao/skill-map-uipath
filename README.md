@@ -8,4 +8,5 @@ Tên branch được đặt theo tên đơn vị, ví dụ:
   - SVWS
 
 Sau khi hoàn tất cập nhật, push code lên branch tương ứng.
+
 Link page: https://sws-bao.github.io/skill-map-uipath/
