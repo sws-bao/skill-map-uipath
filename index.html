@@ -114,545 +114,114 @@
         tabs: ["Level 1 - Foundation", "Level 2 - Business User", "Level 3 - Advanced StudioX", "Level 4 - Professional"],
         levels: {
           1: {
-			  title: "Level 1 - Foundation",
-			  intro: "Level 1 là phần nền tảng dành cho người mới bắt đầu với UiPath StudioX. Mục tiêu của level này là giúp người học làm quen với giao diện, hiểu cách StudioX hoạt động, và thực hiện các tác vụ văn phòng cơ bản như làm việc với Excel, email, và dữ liệu đơn giản.",
-			  goalsTitle: "Mục tiêu học tập",
-			  goals: [
-				"Hiểu StudioX là gì và khác gì so với Orchestrator",
-				"Biết cách mở, điều hướng và sử dụng giao diện StudioX",
-				"Làm việc với Excel ở mức cơ bản",
-				"Sử dụng biến, điều kiện If Else",
-				"Gửi email Outlook và lưu tệp đính kèm"
-			  ],
-			  refsTitle: "Tham khảo",
-			  refs: [
-				{ text: "Introduction to StudioX", url: "https://docs.uipath.com/studiox/standalone/2024.10/user-guide/introduction" },
-				{ text: "About Orchestrator", url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/about-orchestrator" }
-			  ],
-			  skills: [
-				{
-				  title: "3.1 Understand StudioX vs Orchestrator",
-				  expLabel: "Giải thích:",
-				  exp: "StudioX là công cụ tự động hóa thân thiện cho người không chuyên IT. Orchestrator là nơi quản lý, triển khai, lên lịch và giám sát các quy trình tự động hóa.",
-				  exLabel: "Ví dụ:",
-				  ex: "Bạn tạo một quy trình trong StudioX để đọc file Excel. Sau đó, bạn đăng quy trình đó lên Orchestrator để chạy tự động mỗi ngày.",
-				  refs: [
-					{ text: "Introduction to StudioX", url: "https://docs.uipath.com/studiox/standalone/2024.10/user-guide/introduction" },
-					{ text: "About Orchestrator", url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/about-orchestrator" }
-				  ]
-				},
-				{
-				  title: "3.2 Navigate StudioX Interface",
-				  expLabel: "Giải thích:",
-				  exp: "Giao diện StudioX gồm các khu vực chính như ribbon, panel hoạt động, canvas thiết kế workflow và panel thuộc tính. Người học cần biết vị trí các nút cơ bản để thao tác dễ dàng.",
-				  exLabel: "Ví dụ:",
-				  ex: "Khi mở StudioX, bạn có thể chọn “New Project”, kéo thả activity vào workflow và chỉnh thuộc tính ở panel bên phải.",
-				  refs: [
-					{ text: "StudioX Interface", url: "https://docs.uipath.com/studiox/standalone/2024.10/user-guide/studiox-interface" }
-				  ]
-				},
-				{
-				  title: "3.3 Read Excel Data",
-				  expLabel: "Giải thích:",
-				  exp: "Hoạt động này dùng để đọc dữ liệu từ file Excel vào workflow. Đây là bước rất phổ biến trong tự động hóa văn phòng.",
-				  exLabel: "Ví dụ:",
-				  ex: "Đọc danh sách khách hàng từ cột A đến C trong Excel để xử lý tiếp.",
-				  refs: [
-					{ text: "Excel activities", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/excel-activities" }
-				  ]
-				},
-				{
-				  title: "3.4 Write Excel Data",
-				  expLabel: "Giải thích:",
-				  exp: "Dùng để ghi dữ liệu từ workflow vào Excel. Có thể ghi một giá trị, một dòng hoặc nhiều dòng.",
-				  exLabel: "Ví dụ:",
-				  ex: "Ghi kết quả xử lý vào cột “Status” trong file Excel.",
-				  refs: [
-					{ text: "Excel activities", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/excel-activities" }
-				  ]
-				},
-				{
-				  title: "3.5 Insert/Delete Rows and Columns",
-				  expLabel: "Giải thích:",
-				  exp: "Cho phép chèn hoặc xóa dòng/cột trong Excel để thay đổi cấu trúc bảng dữ liệu.",
-				  exLabel: "Ví dụ:",
-				  ex: "Chèn thêm một cột “Ghi chú” vào cuối bảng dữ liệu.",
-				  refs: [
-					{ text: "Excel activities", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/excel-activities" }
-				  ]
-				},
-				{
-				  title: "3.6 Copy Data Between Sheets",
-				  expLabel: "Giải thích:",
-				  exp: "Sao chép dữ liệu từ sheet này sang sheet khác trong cùng workbook hoặc giữa các workbook.",
-				  exLabel: "Ví dụ:",
-				  ex: "Copy danh sách đơn hàng từ sheet “Raw Data” sang sheet “Report”.",
-				  refs: [
-					{ text: "Excel activities", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/excel-activities" }
-				  ]
-				},
-				{
-				  title: "3.7 Format Cells",
-				  expLabel: "Giải thích:",
-				  exp: "Dùng để định dạng ô Excel như màu nền, font chữ, căn lề, viền, định dạng số.",
-				  exLabel: "Ví dụ:",
-				  ex: "Làm nổi bật các ô có trạng thái “Overdue” bằng màu đỏ.",
-				  refs: [
-					{ text: "Excel activities", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/excel-activities" }
-				  ]
-				},
-				{
-				  title: "3.8 Variables and Data Types",
-				  expLabel: "Giải thích:",
-				  exp: "Biến là nơi lưu trữ dữ liệu tạm thời trong workflow. Data type là kiểu dữ liệu như text, number, date, boolean.",
-				  exLabel: "Ví dụ:",
-				  ex: "Lưu tên khách hàng vào biến kiểu String, lưu số lượng vào biến kiểu Int32.",
-				  refs: [
-					{ text: "Variables", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/variables" },
-					{ text: "Data types", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/data-types" }
-				  ]
-				},
-				{
-				  title: "3.9 If Else",
-				  expLabel: "Giải thích:",
-				  exp: "If Else dùng để kiểm tra điều kiện. Nếu điều kiện đúng thì làm một việc, nếu sai thì làm việc khác.",
-				  exLabel: "Ví dụ:",
-				  ex: "Nếu số tiền > 1000 thì gắn nhãn “High Value”, ngược lại gắn “Normal”.",
-				  refs: [
-					{ text: "If activity", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/if-activity" }
-				  ]
-				},
-				{
-				  title: "3.10 Send Outlook Email",
-				  expLabel: "Giải thích:",
-				  exp: "Dùng để gửi email qua Outlook từ workflow StudioX.",
-				  exLabel: "Ví dụ:",
-				  ex: "Gửi email thông báo báo cáo đã hoàn thành cho quản lý.",
-				  refs: [
-					{ text: "Outlook activities", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/outlook-activities" }
-				  ]
-				},
-				{
-				  title: "3.11 Save Attachments",
-				  expLabel: "Giải thích:",
-				  exp: "Dùng để lưu file đính kèm từ email vào thư mục trên máy tính.",
-				  exLabel: "Ví dụ:",
-				  ex: "Tự động lưu tất cả file PDF đính kèm từ email vào thư mục “Invoices”.",
-				  refs: [
-					{ text: "Save email attachments", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/save-email-attachments" }
-				  ]
-				}
-			  ]
-			},
-			2: {
-			  title: "Level 2 - Business User",
-			  intro: "Level 2 dành cho người học đã nắm được các kiến thức nền tảng của StudioX và muốn xử lý các công việc văn phòng thực tế nhiều hơn. Ở level này, bạn sẽ làm việc nhiều với Excel, file, PDF và email theo cách thực tế hơn.",
-			  goalsTitle: "Mục tiêu học tập",
-			  goals: [
-				"Làm việc với Excel Table và dữ liệu dạng bảng",
-				"Lọc, sắp xếp, loại bỏ trùng lặp",
-				"Tra cứu và ghép dữ liệu",
-				"Lặp qua từng dòng Excel, từng file, từng email",
-				"Làm việc với file và PDF",
-				"Thực hiện tự động hóa web cơ bản"
-			  ],
-			  refsTitle: "Tham khảo",
-			  refs: [
-				{ text: "Excel Automation in StudioX", url: "https://docs.uipath.com/studiox/standalone/2024.10/user-guide/excel-automation" },
-				{ text: "UI Automation (Desktop and Web)", url: "https://docs.uipath.com/studiox/standalone/2024.10/user-guide/ui-automation" }
-			  ],
-			  skills: [
-				{
-				  title: "3.1 Excel Tables",
-				  expLabel: "Giải thích:",
-				  exp: "Excel Table là bảng dữ liệu có cấu trúc rõ ràng, giúp StudioX xử lý dữ liệu dễ hơn so với vùng ô thông thường.",
-				  exLabel: "Ví dụ:",
-				  ex: "Chuyển danh sách khách hàng thành Table để dễ lọc và xử lý từng dòng.",
-				  refs: [
-					{ text: "Format As Table", url: "https://docs.uipath.com/activities/other/latest/productivity/create-table-x" }
-				  ]
-				},
-				{
-				  title: "3.2 Filter Data",
-				  expLabel: "Giải thích:",
-				  exp: "Dùng để lọc dữ liệu theo điều kiện, ví dụ chỉ lấy các dòng có trạng thái “Approved”.",
-				  exLabel: "Ví dụ:",
-				  ex: "Lọc danh sách đơn hàng chỉ còn các đơn hàng chưa xử lý.",
-				  refs: [
-					{ text: "Filter (Excel)", url: "https://docs.uipath.com/activities/other/latest/productivity/filter-x" }
-				  ]
-				},
-				{
-				  title: "3.3 Sort Data",
-				  expLabel: "Giải thích:",
-				  exp: "Sắp xếp dữ liệu theo thứ tự tăng dần, giảm dần hoặc theo nhiều cột.",
-				  exLabel: "Ví dụ:",
-				  ex: "Sắp xếp danh sách nhân viên theo tên hoặc theo số tiền giảm dần.",
-				  refs: [
-					{ text: "Sort Range", url: "https://docs.uipath.com/activities/other/latest/productivity/sort-x" }
-				  ]
-				},
-				{
-				  title: "3.4 Remove Duplicates",
-				  expLabel: "Giải thích:",
-				  exp: "Xóa các dòng dữ liệu bị trùng để giữ lại dữ liệu sạch.",
-				  exLabel: "Ví dụ:",
-				  ex: "Loại bỏ các email bị nhập lặp trong danh sách khách hàng.",
-				  refs: [
-					{ text: "Remove Duplicates", url: "https://docs.uipath.com/activities/other/latest/productivity/remove-duplicates-x" }
-				  ]
-				},
-				{
-				  title: "3.5 Lookup Data",
-				  expLabel: "Giải thích:",
-				  exp: "Tra cứu dữ liệu từ một bảng khác để tìm thông tin tương ứng.",
-				  exLabel: "Ví dụ:",
-				  ex: "Tra mã nhân viên để lấy tên nhân viên từ bảng danh mục.",
-				  refs: [
-					{ text: "VLookup", url: "https://docs.uipath.com/activities/other/latest/productivity/v-lookup-x" }
-				  ]
-				},
-				{
-				  title: "3.6 Merge Data",
-				  expLabel: "Giải thích:",
-				  exp: "Kết hợp dữ liệu từ nhiều nguồn hoặc nhiều bảng thành một bảng chung.",
-				  exLabel: "Ví dụ:",
-				  ex: "Gộp danh sách đơn hàng từ nhiều file Excel vào một file tổng hợp.",
-				  refs: [
-					{ text: "Append Range", url: "https://docs.uipath.com/activities/other/latest/productivity/append-range-x" }
-				  ]
-				},
-				{
-				  title: "3.7 For Each Excel Row",
-				  expLabel: "Giải thích:",
-				  exp: "Dùng để lặp qua từng dòng trong Excel và xử lý từng bản ghi.",
-				  exLabel: "Ví dụ:",
-				  ex: "Duyệt từng dòng để kiểm tra trạng thái đơn hàng.",
-				  refs: [
-					{ text: "For Each Excel Row", url: "https://docs.uipath.com/activities/other/latest/productivity/excel-for-each-row" }
-				  ]
-				},
-				{
-				  title: "3.8 For Each File",
-				  expLabel: "Giải thích:",
-				  exp: "Lặp qua từng file trong một thư mục để xử lý hàng loạt.",
-				  exLabel: "Ví dụ:",
-				  ex: "Mở từng file PDF trong thư mục để trích xuất nội dung.",
-				  refs: [
-					{ text: "For Each File in Folder", url: "https://docs.uipath.com/activities/other/latest/workflow/for-each-file-x" }
-				  ]
-				},
-				{
-				  title: "3.9 For Each Email",
-				  expLabel: "Giải thích:",
-				  exp: "Lặp qua từng email trong hộp thư để kiểm tra hoặc xử lý.",
-				  exLabel: "Ví dụ:",
-				  ex: "Duyệt qua email mới để tìm thư có file đính kèm.",
-				  refs: [
-					{ text: "For Each Email", url: "https://docs.uipath.com/activities/other/latest/productivity/for-each-email-x" }
-				  ]
-				},
-				{
-				  title: "3.10 Create/Move/Copy/Rename/Delete Files",
-				  expLabel: "Giải thích:",
-				  exp: "Các thao tác cơ bản với file và thư mục như tạo, di chuyển, sao chép, đổi tên, xóa.",
-				  exLabel: "Ví dụ:",
-				  ex: "Sau khi xử lý xong, chuyển file sang thư mục “Done”.",
-				  refs: [
-					{ text: "File Automation in StudioX", url: "https://docs.uipath.com/studiox/standalone/2024.10/user-guide/file-automation" }
-				  ]
-				},
-				{
-				  title: "3.11 Read PDF",
-				  expLabel: "Giải thích:",
-				  exp: "Dùng để đọc nội dung từ file PDF.",
-				  exLabel: "Ví dụ:",
-				  ex: "Đọc thông tin hóa đơn từ file PDF.",
-				  refs: [
-					{ text: "Read PDF Text", url: "https://docs.uipath.com/activities/other/latest/document-understanding/read-pdf-text" }
-				  ]
-				},
-				{
-				  title: "3.12 Extract PDF Text",
-				  expLabel: "Giải thích:",
-				  exp: "Trích xuất văn bản từ PDF để dùng trong workflow.",
-				  exLabel: "Ví dụ:",
-				  ex: "Lấy nội dung số hóa đơn từ file PDF để ghi vào Excel.",
-				  refs: [
-					{ text: "Read PDF Text", url: "https://docs.uipath.com/activities/other/latest/document-understanding/read-pdf-text" }
-				  ]
-				},
-				{
-				  title: "3.13 Web Automation Basics",
-				  expLabel: "Giải thích:",
-				  exp: "Làm việc với website ở mức cơ bản như mở trang, nhập dữ liệu, bấm nút.",
-				  exLabel: "Ví dụ:",
-				  ex: "Đăng nhập vào website nội bộ và tải báo cáo.",
-				  refs: [
-					{ text: "UI Automation (Desktop and Web)", url: "https://docs.uipath.com/studiox/standalone/2024.10/user-guide/ui-automation" }
-				  ]
-				}
-			  ]
-			},
+            title: "Level 1 - Foundation",
+            intro: "Level 1 là nền tảng dành cho người mới bắt đầu với UiPath StudioX. Mục tiêu là giúp học viên làm quen với giao diện, hiểu công việc cơ bản của StudioX và xây dựng những quy trình đơn giản trên Excel, email và file.",
+            goalsTitle: "Mục tiêu học tập",
+            goals: [
+              "Hiểu StudioX là gì và khác gì với Orchestrator",
+              "Biết cách mở, điều hướng và sử dụng giao diện StudioX",
+              "Làm việc với Excel ở mức cơ bản",
+              "Sử dụng biến, điều kiện If Else",
+              "Gửi email Outlook và lưu tệp đính kèm"
+            ],
+            refsTitle: "Tham khảo",
+            refs: [
+              { text: "Introduction to StudioX", url: "https://docs.uipath.com/studiox/standalone/2024.10/user-guide/introduction" },
+              { text: "About Orchestrator", url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/about-orchestrator" }
+            ],
+            skills: [
+              { title: "1.1 StudioX và Orchestrator", expLabel: "Giải thích:", exp: "StudioX là công cụ tự động hóa thân thiện với người không chuyên IT, tập trung vào quy trình công việc hàng ngày. Orchestrator là nền tảng quản lý, triển khai và giám sát process đã được publish.", exLabel: "Ví dụ:", ex: "Bạn tạo một automation trong StudioX để đọc Excel và gửi email, sau đó publish lên Orchestrator để chạy tự động theo lịch.", refs: [{ text: "Introduction to StudioX", url: "https://docs.uipath.com/studiox/standalone/2024.10/user-guide/introduction" }, { text: "About Orchestrator", url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/about-orchestrator" }] },
+              { title: "1.2 Giao diện StudioX", expLabel: "Giải thích:", exp: "Người học cần biết vị trí ribbon, activities panel, workflow canvas và properties panel để thiết kế automation hiệu quả.", exLabel: "Ví dụ:", ex: "Khi mở StudioX, bạn chọn New Project, kéo hoạt động vào workflow và chỉnh thuộc tính ở panel bên phải.", refs: [{ text: "StudioX Interface", url: "https://docs.uipath.com/studiox/standalone/2024.10/user-guide/studiox-interface" }] },
+              { title: "1.3 Đọc và ghi Excel", expLabel: "Giải thích:", exp: "StudioX hỗ trợ làm việc với Excel qua các hành động đọc/ghi dữ liệu, chèn xóa dòng và định dạng ô.", exLabel: "Ví dụ:", ex: "Đọc dữ liệu từ sheet “Data”, xử lý từng dòng và ghi kết quả vào cột “Status”.", refs: [{ text: "Excel activities", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/excel-activities" }] },
+              { title: "1.4 Biến và điều kiện If Else", expLabel: "Giải thích:", exp: "Biến lưu trữ dữ liệu tạm thời, còn If Else giúp workflow đưa ra quyết định dựa trên điều kiện.", exLabel: "Ví dụ:", ex: "Nếu tổng tiền > 1000, gắn nhãn “High Value”, ngược lại gắn “Normal”.", refs: [{ text: "Variables", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/variables" }, { text: "If activity", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/if-activity" }] },
+              { title: "1.5 Outlook và attachment", expLabel: "Giải thích:", exp: "StudioX cho phép gửi email và lưu file đính kèm từ mailbox, rất phù hợp với quy trình văn phòng.", exLabel: "Ví dụ:", ex: "Gửi email báo cáo và lưu tất cả file PDF đính kèm vào thư mục ‘Invoices’.", refs: [{ text: "Outlook activities", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/outlook-activities" }, { text: "Save email attachments", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/save-email-attachments" }] }
+            ]
+          },
+          2: {
+            title: "Level 2 - Business User",
+            intro: "Level 2 tập trung vào các tác vụ thực tế trong môi trường văn phòng như xử lý dữ liệu Excel, file, PDF và web trong các quy trình công việc hàng ngày.",
+            goalsTitle: "Mục tiêu học tập",
+            goals: [
+              "Làm việc với Excel Table và dữ liệu có cấu trúc",
+              "Lọc, sắp xếp và loại bỏ dữ liệu trùng",
+              "Tra cứu và ghép dữ liệu từ nhiều nguồn",
+              "Lặp qua từng dòng, từng file và từng email",
+              "Xử lý file và PDF",
+              "Thực hiện web automation cơ bản"
+            ],
+            refsTitle: "Tham khảo",
+            refs: [
+              { text: "Excel Automation in StudioX", url: "https://docs.uipath.com/studiox/standalone/2024.10/user-guide/excel-automation" },
+              { text: "UI Automation (Desktop and Web)", url: "https://docs.uipath.com/studiox/standalone/2024.10/user-guide/ui-automation" }
+            ],
+            skills: [
+              { title: "2.1 Excel Tables", expLabel: "Giải thích:", exp: "Excel Table giúp dữ liệu có cấu trúc rõ ràng, dễ lọc, duyệt và xử lý theo từng hàng trong workflow.", exLabel: "Ví dụ:", ex: "Chuyển danh sách khách hàng thành Table để xử lý từng dòng và lọc dữ liệu theo trạng thái.", refs: [{ text: "Format As Table", url: "https://docs.uipath.com/activities/other/latest/productivity/create-table-x" }] },
+              { title: "2.2 Filter và Sort", expLabel: "Giải thích:", exp: "Filter dùng để giữ lại dữ liệu phù hợp điều kiện; Sort dùng để sắp xếp dữ liệu theo thứ tự mong muốn.", exLabel: "Ví dụ:", ex: "Lọc danh sách hóa đơn đang chờ xử lý và sắp xếp theo ngày tăng dần.", refs: [{ text: "Filter (Excel)", url: "https://docs.uipath.com/activities/other/latest/productivity/filter-x" }, { text: "Sort Range", url: "https://docs.uipath.com/activities/other/latest/productivity/sort-x" }] },
+              { title: "2.3 Remove Duplicates và Lookup", expLabel: "Giải thích:", exp: "Remove Duplicates làm sạch dữ liệu, còn Lookup giúp tra cứu thông tin từ một bảng khác.", exLabel: "Ví dụ:", ex: "Loại bỏ email trùng và tra mã nhân viên để lấy tên của nhân viên tương ứng.", refs: [{ text: "Remove Duplicates", url: "https://docs.uipath.com/activities/other/latest/productivity/remove-duplicates-x" }, { text: "VLookup", url: "https://docs.uipath.com/activities/other/latest/productivity/v-lookup-x" }] },
+              { title: "2.4 For Each Excel Row", expLabel: "Giải thích:", exp: "Dùng để lặp qua từng dòng trong Excel và xử lý từng bản ghi theo logic nhất định.", exLabel: "Ví dụ:", ex: "Duyệt từng đơn hàng để kiểm tra trạng thái và gửi thông báo nếu cần.", refs: [{ text: "For Each Excel Row", url: "https://docs.uipath.com/activities/other/latest/productivity/excel-for-each-row" }] },
+              { title: "2.5 Xử lý File, PDF và email", expLabel: "Giải thích:", exp: "StudioX cho phép lặp qua file trong thư mục, đọc PDF và xử lý email hàng loạt.", exLabel: "Ví dụ:", ex: "Đọc từng file PDF trong folder và trích xuất số hóa đơn để lưu vào Excel.", refs: [{ text: "For Each File in Folder", url: "https://docs.uipath.com/activities/other/latest/workflow/for-each-file-x" }, { text: "Read PDF Text", url: "https://docs.uipath.com/activities/other/latest/document-understanding/read-pdf-text" }] },
+              { title: "2.6 Web Automation cơ bản", expLabel: "Giải thích:", exp: "Người học biết cách mở trang web, nhập dữ liệu, click nút và lấy thông tin từ website nội bộ hoặc công khai.", exLabel: "Ví dụ:", ex: "Đăng nhập vào website nội bộ, tải báo cáo và lưu tại thư mục workstation.", refs: [{ text: "UI Automation (Desktop and Web)", url: "https://docs.uipath.com/studiox/standalone/2024.10/user-guide/ui-automation" }] }
+            ]
+          },
           3: {
-			  title: "Level 3 - Advanced StudioX",
-			  intro: "Level 3 dành cho người học đã quen với các thao tác cơ bản và muốn xử lý các tình huống phức tạp hơn trong StudioX. Ở level này, bạn sẽ làm việc với công thức, nhiều workbook, selector, bảng dữ liệu, phân trang, email, tệp đính kèm, điều kiện lồng nhau và các công cụ hỗ trợ gỡ lỗi.",
-			  goalsTitle: "Mục tiêu học tập",
-			  goals: [
-				"Tự động hóa công thức Excel",
-				"Xử lý nhiều workbook cùng lúc",
-				"Làm việc với selector tương đối",
-				"Trích xuất dữ liệu từ bảng và trang web nhiều trang",
-				"Xử lý mail, attachment và logic phức tạp hơn",
-				"Kiểm tra và gỡ lỗi workflow hiệu quả hơn"
-			  ],
-			  refsTitle: "Tham khảo",
-			  refs: [
-				{ text: "Formula automation in StudioX", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/formula-automation" },
-				{ text: "Debugging tools in StudioX", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/debugging-tools" }
-			  ],
-			  skills: [
-				{
-				  title: "3.1 Formula Automation",
-				  expLabel: "Giải thích:",
-				  exp: "Dùng công thức Excel trong StudioX để tính toán hoặc xử lý dữ liệu tự động.",
-				  exLabel: "Ví dụ:",
-				  ex: "Tạo công thức để tính tổng tiền = số lượng × đơn giá.",
-				  refs: [
-					{ text: "Formula automation in StudioX", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/formula-automation" }
-				  ]
-				},
-				{
-				  title: "3.2 Multiple Workbook Processing",
-				  expLabel: "Giải thích:",
-				  exp: "Cho phép xử lý nhiều file Excel trong cùng một quy trình.",
-				  exLabel: "Ví dụ:",
-				  ex: "Mở từng workbook trong thư mục và lấy dữ liệu từ mỗi file để tổng hợp.",
-				  refs: [
-					{ text: "Multiple workbook processing", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/multiple-workbook-processing" }
-				  ]
-				},
-				{
-				  title: "3.3 Relative Selectors",
-				  expLabel: "Giải thích:",
-				  exp: "Relative selectors giúp xác định phần tử giao diện web hoặc ứng dụng dựa trên vị trí tương đối thay vì selector cố định.",
-				  exLabel: "Ví dụ:",
-				  ex: "Nhấn vào nút “Edit” nằm cạnh một dòng dữ liệu cụ thể trên web.",
-				  refs: [
-					{ text: "Relative selectors in StudioX", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/relative-selectors" }
-				  ]
-				},
-				{
-				  title: "3.4 Table Extraction",
-				  expLabel: "Giải thích:",
-				  exp: "Trích xuất dữ liệu dạng bảng từ website hoặc ứng dụng vào Excel hoặc DataTable.",
-				  exLabel: "Ví dụ:",
-				  ex: "Lấy danh sách sản phẩm từ trang web và lưu vào Excel.",
-				  refs: [
-					{ text: "Table extraction in StudioX", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/table-extraction" }
-				  ]
-				},
-				{
-				  title: "3.5 Pagination Handling",
-				  expLabel: "Giải thích:",
-				  exp: "Xử lý dữ liệu trên nhiều trang web khi bảng dữ liệu bị chia thành nhiều trang.",
-				  exLabel: "Ví dụ:",
-				  ex: "Lấy toàn bộ danh sách khách hàng từ trang 1 đến trang 10.",
-				  refs: [
-					{ text: "Pagination handling", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/pagination-handling" }
-				  ]
-				},
-				{
-				  title: "3.6 Mail Filtering",
-				  expLabel: "Giải thích:",
-				  exp: "Lọc email theo điều kiện như người gửi, tiêu đề, ngày nhận hoặc có đính kèm.",
-				  exLabel: "Ví dụ:",
-				  ex: "Chỉ lấy email có tiêu đề chứa “Invoice”.",
-				  refs: [
-					{ text: "Mail filtering in StudioX", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/mail-filtering" }
-				  ]
-				},
-				{
-				  title: "3.7 Attachment Processing",
-				  expLabel: "Giải thích:",
-				  exp: "Xử lý file đính kèm trong email như lưu, đổi tên, đọc nội dung hoặc chuyển tiếp.",
-				  exLabel: "Ví dụ:",
-				  ex: "Lưu tất cả file Excel đính kèm từ email vào thư mục riêng.",
-				  refs: [
-					{ text: "Attachment processing", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/attachment-processing" }
-				  ]
-				},
-				{
-				  title: "3.8 Nested Conditions",
-				  expLabel: "Giải thích:",
-				  exp: "Điều kiện lồng nhau là khi một điều kiện If Else nằm bên trong một điều kiện If Else khác.",
-				  exLabel: "Ví dụ:",
-				  ex: "Nếu đơn hàng lớn hơn 1000 thì kiểm tra tiếp xem khách hàng có VIP hay không.",
-				  refs: [
-					{ text: "Nested conditions in StudioX", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/nested-conditions" }
-				  ]
-				},
-				{
-				  title: "3.9 Validation Rules",
-				  expLabel: "Giải thích:",
-				  exp: "Dùng để kiểm tra dữ liệu đầu vào có hợp lệ hay không trước khi xử lý.",
-				  exLabel: "Ví dụ:",
-				  ex: "Kiểm tra ô email có chứa ký tự “@” hay không.",
-				  refs: [
-					{ text: "Validation rules in StudioX", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/validation-rules" }
-				  ]
-				},
-				{
-				  title: "3.10 Debugging Tools",
-				  expLabel: "Giải thích:",
-				  exp: "Các công cụ giúp kiểm tra lỗi, theo dõi workflow và xác định nguyên nhân khi quy trình chạy sai.",
-				  exLabel: "Ví dụ:",
-				  ex: "Dùng breakpoint để xem giá trị biến tại từng bước.",
-				  refs: [
-					{ text: "Debugging tools in StudioX", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/debugging-tools" }
-				  ]
-				}
-			  ]
-			},
+            title: "Level 3 - Advanced StudioX",
+            intro: "Level 3 hướng tới các automation có độ phức tạp cao hơn như xử lý nhiều workbook, selector tương đối, table extraction, logic lồng nhau và debugging hiệu quả.",
+            goalsTitle: "Mục tiêu học tập",
+            goals: [
+              "Tự động hóa công thức Excel",
+              "Xử lý nhiều workbook cùng lúc",
+              "Làm việc với selector tương đối",
+              "Trích xuất dữ liệu bảng và nội dung nhiều trang",
+              "Xử lý email và attachment phức tạp hơn",
+              "Sử dụng điều kiện lồng nhau và validation",
+              "Gỡ lỗi workflow hiệu quả"
+            ],
+            refsTitle: "Tham khảo",
+            refs: [
+              { text: "Formula automation in StudioX", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/formula-automation" },
+              { text: "Debugging tools in StudioX", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/debugging-tools" }
+            ],
+            skills: [
+              { title: "3.1 Formula Automation", expLabel: "Giải thích:", exp: "Sử dụng công thức Excel trong StudioX để tính toán và xử lý dữ liệu tự động mà không cần thao tác thủ công.", exLabel: "Ví dụ:", ex: "Tự động tính tổng tiền = số lượng × đơn giá cho từng dòng dữ liệu.", refs: [{ text: "Formula automation in StudioX", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/formula-automation" }] },
+              { title: "3.2 Multiple Workbook Processing", expLabel: "Giải thích:", exp: "Cho phép xử lý đồng thời nhiều file Excel trong cùng một workflow, phù hợp với dữ liệu phân tán qua nhiều file.", exLabel: "Ví dụ:", ex: "Mở từng workbook trong thư mục, đọc dữ liệu và tổng hợp vào file báo cáo cuối cùng.", refs: [{ text: "Multiple workbook processing", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/multiple-workbook-processing" }] },
+              { title: "3.3 Relative Selectors", expLabel: "Giải thích:", exp: "Relative selectors giúp xác định phần tử UI/web dựa trên vị trí tương đối, tăng độ bền khi giao diện thay đổi ít.", exLabel: "Ví dụ:", ex: "Nhấn nút Edit nằm cạnh một hàng dữ liệu cụ thể trên trang web.", refs: [{ text: "Relative selectors in StudioX", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/relative-selectors" }] },
+              { title: "3.4 Table Extraction", expLabel: "Giải thích:", exp: "Trích xuất dữ liệu dạng bảng từ website hoặc ứng dụng về Excel/DataTable để xử lý tiếp.", exLabel: "Ví dụ:", ex: "Lấy danh sách sản phẩm và giá từ trang web và lưu vào Excel.", refs: [{ text: "Table extraction in StudioX", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/table-extraction" }] },
+              { title: "3.5 Pagination Handling", expLabel: "Giải thích:", exp: "Dùng khi dữ liệu trên website hoặc ứng dụng chia thành nhiều trang cần x�� lý liên tiếp.", exLabel: "Ví dụ:", ex: "Lấy toàn bộ dữ liệu từ trang 1 đến trang 10 của một báo cáo.", refs: [{ text: "Pagination handling", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/pagination-handling" }] },
+              { title: "3.6 Mail Filtering và Attachment Processing", expLabel: "Giải thích:", exp: "Học viên biết cách lọc mail theo tiêu đề, người gửi, ngày nhận và xử lý file đính kèm một cách có cấu trúc.", exLabel: "Ví dụ:", ex: "Chỉ lấy email có tiêu đề chứa “Invoice” và lưu tất cả attachment vào thư mục riêng.", refs: [{ text: "Mail filtering in StudioX", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/mail-filtering" }, { text: "Attachment processing", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/attachment-processing" }] },
+              { title: "3.7 Nested Conditions và Validation", expLabel: "Giải thích:", exp: "Điều kiện lồng nhau và validation giúp workflow kiểm tra dữ liệu, quyết định logic và tránh lỗi khi xử lý bất thường.", exLabel: "Ví dụ:", ex: "Nếu đơn hàng > 1000 thì kiểm tra tiếp xem khách hàng có phải VIP hay không, đồng thời validate email trước khi lưu.", refs: [{ text: "Nested conditions in StudioX", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/nested-conditions" }, { text: "Validation rules in StudioX", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/validation-rules" }] },
+              { title: "3.8 Debugging Tools", expLabel: "Giải thích:", exp: "Các công cụ debug như breakpoint, watch, step-through giúp xác định nguyên nhân lỗi và kiểm tra giá trị biến trong từng bước.", exLabel: "Ví dụ:", ex: "Dừng workflow tại một điểm, xem giá trị biến và xác định tại sao logic không đi vào nhánh đúng.", refs: [{ text: "Debugging tools in StudioX", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/debugging-tools" }] }
+            ]
+          },
           4: {
-			  title: "Level 4 - Professional",
-			  intro: "Level 4 dành cho người học muốn hiểu cách triển khai và quản lý automation ở mức chuyên nghiệp hơn. Ở level này, bạn sẽ làm quen với việc publish process, quản lý assets, queues, triggers, credentials, cấu hình, biến môi trường, AI Center, Document Understanding, GPT/OpenAI và tái sử dụng workflow.",
-			  goalsTitle: "Mục tiêu học tập",
-			  goals: [
-				"Publish và triển khai process",
-				"Hiểu cách quản lý dữ liệu cấu hình và thông tin nhạy cảm",
-				"Làm việc với Orchestrator assets, queues, triggers",
-				"Sử dụng workflow tái sử dụng",
-				"Nắm được các khái niệm AI Center, Document Understanding, GPT/OpenAI ở mức cơ bản"
-			  ],
-			  refsTitle: "Tham khảo",
-			  refs: [
-				{ text: "Publish process in StudioX", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/publish-process" },
-				{ text: "Assets in Orchestrator", url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/assets" }
-			  ],
-			  skills: [
-				{
-				  title: "3.1 Publish Process",
-				  expLabel: "Giải thích:",
-				  exp: "Publish là bước đóng gói workflow từ StudioX và đưa lên Orchestrator để có thể chạy, chia sẻ hoặc triển khai.",
-				  exLabel: "Ví dụ:",
-				  ex: "Sau khi tạo xong quy trình xử lý email, bạn publish lên Orchestrator để chạy theo lịch.",
-				  refs: [
-					{ text: "Publish process in StudioX", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/publish-process" }
-				  ]
-				},
-				{
-				  title: "3.2 Assets Management",
-				  expLabel: "Giải thích:",
-				  exp: "Assets là nơi lưu các giá trị dùng chung như đường dẫn, tên file, hoặc thông tin cấu hình trong Orchestrator.",
-				  exLabel: "Ví dụ:",
-				  ex: "Lưu đường dẫn thư mục báo cáo vào một asset để dễ thay đổi mà không cần sửa workflow.",
-				  refs: [
-					{ text: "Assets in Orchestrator", url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/assets" }
-				  ]
-				},
-				{
-				  title: "3.3 Queues Management",
-				  expLabel: "Giải thích:",
-				  exp: "Queue dùng để quản lý các công việc cần xử lý theo hàng đợi, đặc biệt khi có nhiều item cần xử lý lần lượt.",
-				  exLabel: "Ví dụ:",
-				  ex: "Đưa danh sách hóa đơn vào queue để xử lý từng hóa đơn một.",
-				  refs: [
-					{ text: "Queues in Orchestrator", url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/queues" }
-				  ]
-				},
-				{
-				  title: "3.4 Triggers",
-				  expLabel: "Giải thích:",
-				  exp: "Trigger dùng để tự động chạy process theo thời gian hoặc theo sự kiện.",
-				  exLabel: "Ví dụ:",
-				  ex: "Thiết lập trigger để workflow chạy mỗi sáng lúc 8 giờ.",
-				  refs: [
-					{ text: "Triggers in Orchestrator", url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/triggers" }
-				  ]
-				},
-				{
-				  title: "3.5 Credential Management",
-				  expLabel: "Giải thích:",
-				  exp: "Dùng để lưu và quản lý thông tin đăng nhập một cách an toàn.",
-				  exLabel: "Ví dụ:",
-				  ex: "Lưu username và password của website trong Orchestrator thay vì ghi trực tiếp trong workflow.",
-				  refs: [
-					{ text: "Credentials in Orchestrator", url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/credentials" }
-				  ]
-				},
-				{
-				  title: "3.6 Config Files",
-				  expLabel: "Giải thích:",
-				  exp: "File cấu hình giúp lưu các tham số như đường dẫn, email người nhận, hoặc tên sheet để workflow dễ bảo trì.",
-				  exLabel: "Ví dụ:",
-				  ex: "Dùng file Excel config để thay đổi địa chỉ email mà không cần sửa logic.",
-				  refs: [
-					{ text: "Configuration files", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/configuration-files" }
-				  ]
-				},
-				{
-				  title: "3.7 Environment Variables",
-				  expLabel: "Giải thích:",
-				  exp: "Biến môi trường là các giá trị có thể thay đổi theo máy tính hoặc môi trường chạy khác nhau.",
-				  exLabel: "Ví dụ:",
-				  ex: "Dùng biến môi trường để xác định thư mục làm việc trên máy test và máy production.",
-				  refs: [
-					{ text: "Environment variables in Orchestrator", url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/environment-variables" }
-				  ]
-				},
-				{
-				  title: "3.8 AI Center Basics",
-				  expLabel: "Giải thích:",
-				  exp: "AI Center là nơi triển khai và quản lý mô hình AI phục vụ tự động hóa thông minh.",
-				  exLabel: "Ví dụ:",
-				  ex: "Dùng mô hình AI để phân loại tài liệu trước khi xử lý.",
-				  refs: [
-					{ text: "AI Center overview", url: "https://docs.uipath.com/ai-center/automation-cloud/latest/user-guide/ai-center-overview" }
-				  ]
-				},
-				{
-				  title: "3.9 Document Understanding",
-				  expLabel: "Giải thích:",
-				  exp: "Document Understanding giúp đọc, phân loại và trích xuất dữ liệu từ tài liệu như hóa đơn, phiếu, biểu mẫu.",
-				  exLabel: "Ví dụ:",
-				  ex: "Trích xuất số hóa đơn, ngày hóa đơn và tổng tiền từ file PDF.",
-				  refs: [
-					{ text: "Document Understanding overview", url: "https://docs.uipath.com/document-understanding/automation-cloud/latest/user-guide/about-document-understanding" }
-				  ]
-				},
-				{
-				  title: "3.10 GPT/OpenAI Integration",
-				  expLabel: "Giải thích:",
-				  exp: "Tích hợp GPT/OpenAI giúp workflow có thể tạo nội dung, tóm tắt hoặc hỗ trợ xử lý ngôn ngữ tự nhiên.",
-				  exLabel: "Ví dụ:",
-				  ex: "Dùng GPT để tóm tắt nội dung email trước khi lưu vào Excel.",
-				  refs: [
-					{ text: "GPT/OpenAI integration in UiPath", url: "https://docs.uipath.com/ai-center/automation-cloud/latest/user-guide/openai-integration" }
-				  ]
-				},
-				{
-				  title: "3.11 Workflow Reuse",
-				  expLabel: "Giải thích:",
-				  exp: "Tái sử dụng workflow nghĩa là thiết kế các phần dùng chung để có thể dùng lại ở nhiều quy trình khác nhau.",
-				  exLabel: "Ví dụ:",
-				  ex: "Tạo một workflow riêng để gửi email thông báo và dùng lại trong nhiều automation.",
-				  refs: [
-					{ text: "Reusable workflows", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/reusable-workflows" }
-				  ]
-				},
-				{
-				  title: "3.12 Library Usage",
-				  expLabel: "Giải thích:",
-				  exp: "Library là tập hợp các thành phần hoặc workflow dùng chung, giúp chuẩn hóa và tiết kiệm thời gian phát triển.",
-				  exLabel: "Ví dụ:",
-				  ex: "Tạo library chứa các bước xử lý file chuẩn để các dự án khác dùng lại.",
-				  refs: [
-					{ text: "Libraries in UiPath", url: "https://docs.uipath.com/studio/automation-cloud/latest/user-guide/about-libraries" }
-				  ]
-				}
-			  ]
-			},
+            title: "Level 4 - Professional",
+            intro: "Level 4 dành cho người học đã nắm kỹ thuật cơ bản và muốn đưa automation lên mức vận hành thực tế: publish process, chạy trên Orchestrator, quản lý config, schedule và đảm bảo độ tin cậy trong môi trường production.",
+            goalsTitle: "Mục tiêu học tập",
+            goals: [
+              "Publish và triển khai process từ StudioX",
+              "Hiểu Orchestrator và cách vận hành automation",
+              "Quản lý assets, queues và trigger theo lịch",
+              "Bảo mật dữ liệu và cấu hình môi trường",
+              "Theo dõi lỗi, retry và xử lý exception hiệu quả",
+              "Khái quát về AI/Document Understanding ở mức giới thiệu"
+            ],
+            refsTitle: "Tham khảo",
+            refs: [
+              { text: "Publish process in StudioX", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/publish-process" },
+              { text: "Assets in Orchestrator", url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/assets" },
+              { text: "Queues in Orchestrator", url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/queues" }
+            ],
+            skills: [
+              { title: "4.1 Publish và triển khai process", expLabel: "Giải thích:", exp: "Publish là bước đóng gói workflow từ StudioX để đưa lên Orchestrator, nơi process có thể chạy, lên lịch và giám sát theo user, folder và môi trường.", exLabel: "Ví dụ:", ex: "Sau khi hoàn thành workflow xử lý invoice, bạn publish lên Orchestrator để chạy theo lịch ở môi trường production.", refs: [{ text: "Publish process in StudioX", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/publish-process" }] },
+              { title: "4.2 Assets và cấu hình chung", expLabel: "Giải thích:", exp: "Assets là nơi lưu các giá trị dùng chung như đường dẫn thư mục, địa chỉ email, tên file hoặc tham số cấu hình. Điều này giúp workflow dễ bảo trì và không cần sửa code nhiều lần.", exLabel: "Ví dụ:", ex: "Lưu đường dẫn thư mục báo cáo vào asset để thay đổi nhanh mà không cần chỉnh sửa workflow.", refs: [{ text: "Assets in Orchestrator", url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/assets" }, { text: "Environment variables in Orchestrator", url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/environment-variables" }] },
+              { title: "4.3 Queues và xử lý hàng đợi", expLabel: "Giải thích:", exp: "Queue dùng để quản lý danh sách item cần xử lý theo thứ tự, thích hợp khi automation phải xử lý nhiều công việc liên tiếp và có trạng thái rõ ràng.", exLabel: "Ví dụ:", ex: "Đưa danh sách hóa đơn vào queue để mỗi đơn được xử lý theo thứ tự và giám sát trạng thái riêng.", refs: [{ text: "Queues in Orchestrator", url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/queues" }] },
+              { title: "4.4 Triggers và schedule", expLabel: "Giải thích:", exp: "Trigger cho phép automation chạy theo lịch hoặc theo sự kiện, giúp quy trình hoạt động ổn định với ít can thiệp thủ công.", exLabel: "Ví dụ:", ex: "Thiết lập trigger để process xử lý báo cáo chạy mỗi sáng lúc 8:00.", refs: [{ text: "Triggers in Orchestrator", url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/triggers" }] },
+              { title: "4.5 Credentials và bảo mật dữ liệu", expLabel: "Giải thích:", exp: "Thông tin nhạy cảm như username, password, token không nên ghi trực tiếp trong workflow. StudioX/Orchestrator hỗ trợ lưu trữ an toàn và quản lý theo nguyên tắc bảo mật.", exLabel: "Ví dụ:", ex: "Lưu thông tin đăng nhập website và API vào credential store thay vì mã hóa cứng trong script.", refs: [{ text: "Credentials in Orchestrator", url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/credentials" }] },
+              { title: "4.6 Exception handling và retry", expLabel: "Giải thích:", exp: "Khi process chạy production, việc xử lý lỗi và retry là yếu tố quan trọng để automation đáng tin cậy hơn và ít gián đoạn.", exLabel: "Ví dụ:", ex: "Nếu file nguồn không tồn tại hoặc đường dẫn sai, automation ghi log, gửi thông báo và retry tối đa theo cấu hình.", refs: [{ text: "Exception handling in StudioX", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/exception-handling" }] },
+              { title: "4.7 Monitoring, logging và governance", expLabel: "Giải thích:", exp: "Các automation ở mức professional cần được giám sát qua job status, log, notification và phân quyền theo folder, môi trường và vai trò người dùng.", exLabel: "Ví dụ:", ex: "Kiểm tra lịch sử job trên Orchestrator, theo dõi trạng thái chạy và xác định workflow nào đang fail.", refs: [{ text: "Monitoring in Orchestrator", url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/monitoring" }] },
+              { title: "4.8 Reusability trong StudioX", expLabel: "Giải thích:", exp: "Mặc dù StudioX tập trung vào người dùng nghiệp vụ, vẫn có thể thiết kế workflow dùng lại cho các bước lặp lại như gửi email, xử lý file, chuẩn hóa dữ liệu.", exLabel: "Ví dụ:", ex: "Tạo một workflow riêng để lưu log và gửi email thông báo, rồi tái sử dụng ở nhiều automation khác nhau.", refs: [{ text: "Reusable workflows", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/reusable-workflows" }] },
+              { title: "4.9 AI và Document Understanding ở mức giới thiệu", expLabel: "Giải thích:", exp: "Ở level này, học viên chỉ cần hiểu khái niệm AI Center, Document Understanding và OpenAI/GPT có thể hỗ trợ trong automation, thay vì đi sâu kỹ thuật triển khai.", exLabel: "Ví dụ:", ex: "Dùng AI để trích xuất thông tin từ hóa đơn PDF hoặc tóm tắt nội dung email trước khi lưu vào Excel.", refs: [{ text: "AI Center overview", url: "https://docs.uipath.com/ai-center/automation-cloud/latest/user-guide/ai-center-overview" }, { text: "Document Understanding overview", url: "https://docs.uipath.com/document-understanding/automation-cloud/latest/user-guide/about-document-understanding" }] }
+            ]
+          }
         }
       },
       en: {
@@ -664,622 +233,190 @@
         tabs: ["Level 1 - Foundation", "Level 2 - Business User", "Level 3 - Advanced StudioX", "Level 4 - Professional"],
         levels: {
           1: {
-			  title: "Level 1 - Foundation",
-			  intro: "Level 1 is the foundation section for beginners in UiPath StudioX. It helps learners get familiar with the interface, understand how StudioX works, and perform basic office automation tasks such as working with Excel, email, and simple data handling.",
-			  goalsTitle: "Learning Objectives",
-			  goals: [
-				"Understand what StudioX is and how it differs from Orchestrator",
-				"Navigate and use the StudioX interface",
-				"Work with Excel at a basic level",
-				"Use variables and If Else conditions",
-				"Send Outlook emails and save attachments"
-			  ],
-			  refsTitle: "References",
-			  refs: [
-				{ text: "Introduction to StudioX", url: "https://docs.uipath.com/studiox/standalone/2024.10/user-guide/introduction" },
-				{ text: "About Orchestrator", url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/about-orchestrator" }
-			  ],
-			  skills: [
-				{
-				  title: "3.1 Understand StudioX vs Orchestrator",
-				  expLabel: "Explanation:",
-				  exp: "StudioX is a beginner-friendly automation tool for non-technical users. Orchestrator is used to manage, deploy, schedule, and monitor automation processes.",
-				  exLabel: "Example:",
-				  ex: "You create a workflow in StudioX to read an Excel file, then publish it to Orchestrator to run automatically every day.",
-				  refs: [
-					{ text: "Introduction to StudioX", url: "https://docs.uipath.com/studiox/standalone/2024.10/user-guide/introduction" },
-					{ text: "About Orchestrator", url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/about-orchestrator" }
-				  ]
-				},
-				{
-				  title: "3.2 Navigate StudioX Interface",
-				  expLabel: "Explanation:",
-				  exp: "The StudioX interface includes the ribbon, activities panel, workflow canvas, and properties panel. Learners should know where the main controls are located.",
-				  exLabel: "Example:",
-				  ex: "When you open StudioX, you can select “New Project”, drag an activity into the workflow, and edit its properties on the right panel.",
-				  refs: [
-					{ text: "StudioX Interface", url: "https://docs.uipath.com/studiox/standalone/2024.10/user-guide/studiox-interface" }
-				  ]
-				},
-				{
-				  title: "3.3 Read Excel Data",
-				  expLabel: "Explanation:",
-				  exp: "This activity reads data from an Excel file into the workflow. It is one of the most common steps in office automation.",
-				  exLabel: "Example:",
-				  ex: "Read customer data from columns A to C in Excel for further processing.",
-				  refs: [
-					{ text: "Excel activities", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/excel-activities" }
-				  ]
-				},
-				{
-				  title: "3.4 Write Excel Data",
-				  expLabel: "Explanation:",
-				  exp: "This activity writes data from the workflow into Excel. You can write a single value, a row, or multiple rows.",
-				  exLabel: "Example:",
-				  ex: "Write the processing result into a “Status” column in the Excel file.",
-				  refs: [
-					{ text: "Excel activities", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/excel-activities" }
-				  ]
-				},
-				{
-				  title: "3.5 Insert/Delete Rows and Columns",
-				  expLabel: "Explanation:",
-				  exp: "This allows you to insert or delete rows/columns in Excel to modify the table structure.",
-				  exLabel: "Example:",
-				  ex: "Insert a new “Notes” column at the end of the data table.",
-				  refs: [
-					{ text: "Excel activities", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/excel-activities" }
-				  ]
-				},
-				{
-				  title: "3.6 Copy Data Between Sheets",
-				  expLabel: "Explanation:",
-				  exp: "Copies data from one sheet to another within the same workbook or between workbooks.",
-				  exLabel: "Example:",
-				  ex: "Copy order data from the “Raw Data” sheet to the “Report” sheet.",
-				  refs: [
-					{ text: "Excel activities", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/excel-activities" }
-				  ]
-				},
-				{
-				  title: "3.7 Format Cells",
-				  expLabel: "Explanation:",
-				  exp: "Used to format Excel cells such as background color, font, alignment, borders, and number format.",
-				  exLabel: "Example:",
-				  ex: "Highlight cells with the status “Overdue” in red.",
-				  refs: [
-					{ text: "Excel activities", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/excel-activities" }
-				  ]
-				},
-				{
-				  title: "3.8 Variables and Data Types",
-				  expLabel: "Explanation:",
-				  exp: "Variables store temporary data in a workflow. Data types include text, number, date, and boolean.",
-				  exLabel: "Example:",
-				  ex: "Store a customer name in a String variable and a quantity in an Int32 variable.",
-				  refs: [
-					{ text: "Variables", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/variables" },
-					{ text: "Data types", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/data-types" }
-				  ]
-				},
-				{
-				  title: "3.9 If Else",
-				  expLabel: "Explanation:",
-				  exp: "If Else is used to check a condition. If the condition is true, one action is executed; otherwise, another action is performed.",
-				  exLabel: "Example:",
-				  ex: "If the amount is greater than 1000, label it “High Value”; otherwise, label it “Normal”.",
-				  refs: [
-					{ text: "If activity", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/if-activity" }
-				  ]
-				},
-				{
-				  title: "3.10 Send Outlook Email",
-				  expLabel: "Explanation:",
-				  exp: "Used to send emails through Outlook from a StudioX workflow.",
-				  exLabel: "Example:",
-				  ex: "Send a notification email to the manager when the report is ready.",
-				  refs: [
-					{ text: "Outlook activities", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/outlook-activities" }
-				  ]
-				},
-				{
-				  title: "3.11 Save Attachments",
-				  expLabel: "Explanation:",
-				  exp: "Used to save email attachments to a local folder.",
-				  exLabel: "Example:",
-				  ex: "Automatically save all PDF attachments from emails into the “Invoices” folder.",
-				  refs: [
-					{ text: "Save email attachments", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/save-email-attachments" }
-				  ]
-				}
-			  ]
-			},
+            title: "Level 1 - Foundation",
+            intro: "Level 1 is the foundation for beginners in UiPath StudioX. The goal is to help learners become familiar with the interface, understand the basics of StudioX and build simple workflows using Excel, email and files.",
+            goalsTitle: "Learning objectives",
+            goals: [
+              "Understand what StudioX is and how it differs from Orchestrator",
+              "Learn how to open, navigate and use the StudioX interface",
+              "Work with Excel at a basic level",
+              "Use variables and If Else conditions",
+              "Send Outlook emails and save attachments"
+            ],
+            refsTitle: "References",
+            refs: [
+              { text: "Introduction to StudioX", url: "https://docs.uipath.com/studiox/standalone/2024.10/user-guide/introduction" },
+              { text: "About Orchestrator", url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/about-orchestrator" }
+            ],
+            skills: [
+              { title: "1.1 StudioX and Orchestrator", expLabel: "Explanation:", exp: "StudioX is a user-friendly automation tool for non-technical users. Orchestrator is the platform used to manage, deploy and monitor published automation processes.", exLabel: "Example:", ex: "You create a workflow in StudioX to read Excel and send an email, then publish it to Orchestrator to run on a schedule.", refs: [{ text: "Introduction to StudioX", url: "https://docs.uipath.com/studiox/standalone/2024.10/user-guide/introduction" }, { text: "About Orchestrator", url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/about-orchestrator" }] },
+              { title: "1.2 StudioX Interface", expLabel: "Explanation:", exp: "Learners need to know where the ribbon, activities panel, workflow canvas and properties panel are located in order to build automations effectively.", exLabel: "Example:", ex: "When you open StudioX, you can choose New Project, drag an activity to the canvas and edit its properties in the right panel.", refs: [{ text: "StudioX Interface", url: "https://docs.uipath.com/studiox/standalone/2024.10/user-guide/studiox-interface" }] },
+              { title: "1.3 Read and Write Excel", expLabel: "Explanation:", exp: "StudioX supports basic Excel operations such as reading and writing values, inserting and deleting rows and formatting cells.", exLabel: "Example:", ex: "Read customer data from the sheet, process each row and write the result to a Status column.", refs: [{ text: "Excel activities", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/excel-activities" }] },
+              { title: "1.4 Variables and If Else", expLabel: "Explanation:", exp: "Variables store temporary values, while If Else allows the workflow to take different actions based on a condition.", exLabel: "Example:", ex: "If the amount is greater than 1000, tag it as High Value; otherwise, tag it as Normal.", refs: [{ text: "Variables", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/variables" }, { text: "If activity", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/if-activity" }] },
+              { title: "1.5 Outlook and attachments", expLabel: "Explanation:", exp: "StudioX can send emails and save attachments from mailboxes, which is especially useful for office workflows.", exLabel: "Example:", ex: "Send a report email and save all PDF attachments into an Invoices folder.", refs: [{ text: "Outlook activities", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/outlook-activities" }, { text: "Save email attachments", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/save-email-attachments" }] }
+            ]
+          },
           2: {
-			  title: "Level 2 - Business User",
-			  intro: "Level 2 is designed for learners who already understand the StudioX basics and want to handle more real-world office tasks. In this level, you will work more with Excel, files, PDF documents, and email in practical scenarios.",
-			  goalsTitle: "Learning Objectives",
-			  goals: [
-				"Work with Excel Tables and structured data",
-				"Filter, sort, and remove duplicates",
-				"Look up and merge data",
-				"Loop through Excel rows, files, and emails",
-				"Handle files and PDF documents",
-				"Perform basic web automation"
-			  ],
-			  refsTitle: "References",
-			  refs: [
-				{ text: "Excel Automation in StudioX", url: "https://docs.uipath.com/studiox/standalone/2024.10/user-guide/excel-automation" },
-				{ text: "UI Automation (Desktop and Web)", url: "https://docs.uipath.com/studiox/standalone/2024.10/user-guide/ui-automation" }
-			  ],
-			  skills: [
-				{
-				  title: "3.1 Excel Tables",
-				  expLabel: "Explanation:",
-				  exp: "An Excel Table is a structured data table that makes it easier for StudioX to process data compared to a normal cell range.",
-				  exLabel: "Example:",
-				  ex: "Convert a customer list into a Table to filter and process each row more easily.",
-				  refs: [
-					{ text: "Format As Table", url: "https://docs.uipath.com/activities/other/latest/productivity/create-table-x" }
-				  ]
-				},
-				{
-				  title: "3.2 Filter Data",
-				  expLabel: "Explanation:",
-				  exp: "Used to filter data based on conditions, such as keeping only rows with the status “Approved”.",
-				  exLabel: "Example:",
-				  ex: "Filter an order list to show only unprocessed orders.",
-				  refs: [
-					{ text: "Filter (Excel)", url: "https://docs.uipath.com/activities/other/latest/productivity/filter-x" }
-				  ]
-				},
-				{
-				  title: "3.3 Sort Data",
-				  expLabel: "Explanation:",
-				  exp: "Sorts data in ascending, descending, or multi-column order.",
-				  exLabel: "Example:",
-				  ex: "Sort employees by name or by amount in descending order.",
-				  refs: [
-					{ text: "Sort Range", url: "https://docs.uipath.com/activities/other/latest/productivity/sort-x" }
-				  ]
-				},
-				{
-				  title: "3.4 Remove Duplicates",
-				  expLabel: "Explanation:",
-				  exp: "Removes duplicate rows to keep the data clean.",
-				  exLabel: "Example:",
-				  ex: "Remove duplicate email addresses from a customer list.",
-				  refs: [
-					{ text: "Remove Duplicates", url: "https://docs.uipath.com/activities/other/latest/productivity/remove-duplicates-x" }
-				  ]
-				},
-				{
-				  title: "3.5 Lookup Data",
-				  expLabel: "Explanation:",
-				  exp: "Looks up data from another table to find matching information.",
-				  exLabel: "Example:",
-				  ex: "Look up an employee ID to retrieve the employee name from a reference table.",
-				  refs: [
-					{ text: "VLookup", url: "https://docs.uipath.com/activities/other/latest/productivity/v-lookup-x" }
-				  ]
-				},
-				{
-				  title: "3.6 Merge Data",
-				  expLabel: "Explanation:",
-				  exp: "Combines data from multiple sources or tables into one unified table.",
-				  exLabel: "Example:",
-				  ex: "Merge order lists from multiple Excel files into one summary file.",
-				  refs: [
-					{ text: "Append Range", url: "https://docs.uipath.com/activities/other/latest/productivity/append-range-x" }
-				  ]
-				},
-				{
-				  title: "3.7 For Each Excel Row",
-				  expLabel: "Explanation:",
-				  exp: "Loops through each row in Excel and processes each record.",
-				  exLabel: "Example:",
-				  ex: "Iterate through each row to check the order status.",
-				  refs: [
-					{ text: "For Each Excel Row", url: "https://docs.uipath.com/activities/other/latest/productivity/excel-for-each-row" }
-				  ]
-				},
-				{
-				  title: "3.8 For Each File",
-				  expLabel: "Explanation:",
-				  exp: "Loops through each file in a folder to process them in bulk.",
-				  exLabel: "Example:",
-				  ex: "Open each PDF file in a folder to extract its content.",
-				  refs: [
-					{ text: "For Each File in Folder", url: "https://docs.uipath.com/activities/other/latest/workflow/for-each-file-x" }
-				  ]
-				},
-				{
-				  title: "3.9 For Each Email",
-				  expLabel: "Explanation:",
-				  exp: "Loops through each email in a mailbox to inspect or process messages.",
-				  exLabel: "Example:",
-				  ex: "Go through new emails to find messages with attachments.",
-				  refs: [
-					{ text: "For Each Email", url: "https://docs.uipath.com/activities/other/latest/productivity/for-each-email-x" }
-				  ]
-				},
-				{
-				  title: "3.10 Create/Move/Copy/Rename/Delete Files",
-				  expLabel: "Explanation:",
-				  exp: "Basic file and folder operations such as creating, moving, copying, renaming, and deleting files.",
-				  exLabel: "Example:",
-				  ex: "After processing, move the file to a “Done” folder.",
-				  refs: [
-					{ text: "File Automation in StudioX", url: "https://docs.uipath.com/studiox/standalone/2024.10/user-guide/file-automation" }
-				  ]
-				},
-				{
-				  title: "3.11 Read PDF",
-				  expLabel: "Explanation:",
-				  exp: "Used to read content from a PDF file.",
-				  exLabel: "Example:",
-				  ex: "Read invoice information from a PDF document.",
-				  refs: [
-					{ text: "Read PDF Text", url: "https://docs.uipath.com/activities/other/latest/document-understanding/read-pdf-text" }
-				  ]
-				},
-				{
-				  title: "3.12 Extract PDF Text",
-				  expLabel: "Explanation:",
-				  exp: "Extracts text from a PDF so it can be used in a workflow.",
-				  exLabel: "Example:",
-				  ex: "Extract an invoice number from a PDF and write it into Excel.",
-				  refs: [
-					{ text: "Read PDF Text", url: "https://docs.uipath.com/activities/other/latest/document-understanding/read-pdf-text" }
-				  ]
-				},
-				{
-				  title: "3.13 Web Automation Basics",
-				  expLabel: "Explanation:",
-				  exp: "Basic website automation such as opening a page, entering data, and clicking buttons.",
-				  exLabel: "Example:",
-				  ex: "Log in to an internal website and download a report.",
-				  refs: [
-					{ text: "UI Automation (Desktop and Web)", url: "https://docs.uipath.com/studiox/standalone/2024.10/user-guide/ui-automation" }
-				  ]
-				}
-			  ]
-			},
+            title: "Level 2 - Business User",
+            intro: "Level 2 focuses on practical office tasks such as data processing, file and PDF handling, and simple web automation in day-to-day work environments.",
+            goalsTitle: "Learning objectives",
+            goals: [
+              "Work with Excel tables and structured data",
+              "Filter, sort and remove duplicates",
+              "Look up and merge data from different sources",
+              "Loop through rows, files and emails",
+              "Handle files and PDF documents",
+              "Perform basic web automation"
+            ],
+            refsTitle: "References",
+            refs: [
+              { text: "Excel Automation in StudioX", url: "https://docs.uipath.com/studiox/standalone/2024.10/user-guide/excel-automation" },
+              { text: "UI Automation (Desktop and Web)", url: "https://docs.uipath.com/studiox/standalone/2024.10/user-guide/ui-automation" }
+            ],
+            skills: [
+              { title: "2.1 Excel Tables", expLabel: "Explanation:", exp: "Excel Tables give structure to data, which makes it easier to filter, loop and process each row in a workflow.", exLabel: "Example:", ex: "Convert a customer list into a table so it can be filtered and processed row by row.", refs: [{ text: "Format As Table", url: "https://docs.uipath.com/activities/other/latest/productivity/create-table-x" }] },
+              { title: "2.2 Filter and Sort", expLabel: "Explanation:", exp: "Filter keeps only rows that match conditions, while Sort organizes data in a chosen order.", exLabel: "Example:", ex: "Filter outstanding invoices and sort them by date ascending.", refs: [{ text: "Filter (Excel)", url: "https://docs.uipath.com/activities/other/latest/productivity/filter-x" }, { text: "Sort Range", url: "https://docs.uipath.com/activities/other/latest/productivity/sort-x" }] },
+              { title: "2.3 Remove Duplicates and Lookup", expLabel: "Explanation:", exp: "Remove Duplicates cleans data, and Lookup searches for matching information from another table.", exLabel: "Example:", ex: "Remove duplicate emails and look up an employee ID to retrieve the employee name.", refs: [{ text: "Remove Duplicates", url: "https://docs.uipath.com/activities/other/latest/productivity/remove-duplicates-x" }, { text: "VLookup", url: "https://docs.uipath.com/activities/other/latest/productivity/v-lookup-x" }] },
+              { title: "2.4 For Each Excel Row", expLabel: "Explanation:", exp: "This activity loops through each row in Excel and applies processing to each record.", exLabel: "Example:", ex: "Check the status of each order and trigger the right follow-up action.", refs: [{ text: "For Each Excel Row", url: "https://docs.uipath.com/activities/other/latest/productivity/excel-for-each-row" }] },
+              { title: "2.5 File, PDF and Email Processing", expLabel: "Explanation:", exp: "StudioX allows processing multiple files in a folder, reading PDFs and handling emails in batches.", exLabel: "Example:", ex: "Read each PDF in a folder and extract the invoice number into Excel.", refs: [{ text: "For Each File in Folder", url: "https://docs.uipath.com/activities/other/latest/workflow/for-each-file-x" }, { text: "Read PDF Text", url: "https://docs.uipath.com/activities/other/latest/document-understanding/read-pdf-text" }] },
+              { title: "2.6 Basic Web Automation", expLabel: "Explanation:", exp: "Learners can open a website, enter information, click buttons and gather data from internal or public pages.", exLabel: "Example:", ex: "Log in to an internal web portal, download a report and save it to a local folder.", refs: [{ text: "UI Automation (Desktop and Web)", url: "https://docs.uipath.com/studiox/standalone/2024.10/user-guide/ui-automation" }] }
+            ]
+          },
           3: {
-			  title: "Level 3 - Advanced StudioX",
-			  intro: "Level 3 is designed for learners who are already comfortable with the basics and want to handle more advanced scenarios in StudioX. In this level, you will work with formulas, multiple workbooks, selectors, table extraction, pagination, email, attachments, nested logic, and debugging tools.",
-			  goalsTitle: "Learning Objectives",
-			  goals: [
-				"Automate Excel formulas",
-				"Process multiple workbooks",
-				"Work with relative selectors",
-				"Extract table data and handle multi-page web content",
-				"Process emails and attachments",
-				"Use nested conditions and validation rules",
-				"Debug workflows more effectively"
-			  ],
-			  refsTitle: "References",
-			  refs: [
-				{ text: "Formula automation in StudioX", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/formula-automation" },
-				{ text: "Debugging tools in StudioX", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/debugging-tools" }
-			  ],
-			  skills: [
-				{
-				  title: "3.1 Formula Automation",
-				  expLabel: "Explanation:",
-				  exp: "Use Excel formulas in StudioX to calculate or process data automatically.",
-				  exLabel: "Example:",
-				  ex: "Create a formula to calculate total amount = quantity × unit price.",
-				  refs: [
-					{ text: "Formula automation in StudioX", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/formula-automation" }
-				  ]
-				},
-				{
-				  title: "3.2 Multiple Workbook Processing",
-				  expLabel: "Explanation:",
-				  exp: "Allows you to process multiple Excel files within a single workflow.",
-				  exLabel: "Example:",
-				  ex: "Open each workbook in a folder and collect data from every file for consolidation.",
-				  refs: [
-					{ text: "Multiple workbook processing", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/multiple-workbook-processing" }
-				  ]
-				},
-				{
-				  title: "3.3 Relative Selectors",
-				  expLabel: "Explanation:",
-				  exp: "Relative selectors identify UI or web elements based on their relative position instead of a fixed selector.",
-				  exLabel: "Example:",
-				  ex: "Click the “Edit” button next to a specific row on a web page.",
-				  refs: [
-					{ text: "Relative selectors in StudioX", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/relative-selectors" }
-				  ]
-				},
-				{
-				  title: "3.4 Table Extraction",
-				  expLabel: "Explanation:",
-				  exp: "Extracts table data from websites or applications into Excel or a DataTable.",
-				  exLabel: "Example:",
-				  ex: "Retrieve a product list from a website and save it to Excel.",
-				  refs: [
-					{ text: "Table extraction in StudioX", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/table-extraction" }
-				  ]
-				},
-				{
-				  title: "3.5 Pagination Handling",
-				  expLabel: "Explanation:",
-				  exp: "Handles data spread across multiple pages when a table is split into several web pages.",
-				  exLabel: "Example:",
-				  ex: "Extract the full customer list from page 1 to page 10.",
-				  refs: [
-					{ text: "Pagination handling", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/pagination-handling" }
-				  ]
-				},
-				{
-				  title: "3.6 Mail Filtering",
-				  expLabel: "Explanation:",
-				  exp: "Filters emails based on conditions such as sender, subject, date, or attachments.",
-				  exLabel: "Example:",
-				  ex: "Only retrieve emails with the subject containing “Invoice”.",
-				  refs: [
-					{ text: "Mail filtering in StudioX", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/mail-filtering" }
-				  ]
-				},
-				{
-				  title: "3.7 Attachment Processing",
-				  expLabel: "Explanation:",
-				  exp: "Processes email attachments such as saving, renaming, reading, or forwarding them.",
-				  exLabel: "Example:",
-				  ex: "Save all Excel attachments from emails into a dedicated folder.",
-				  refs: [
-					{ text: "Attachment processing", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/attachment-processing" }
-				  ]
-				},
-				{
-				  title: "3.8 Nested Conditions",
-				  expLabel: "Explanation:",
-				  exp: "Nested conditions occur when one If Else is placed inside another If Else.",
-				  exLabel: "Example:",
-				  ex: "If the order amount is greater than 1000, then check whether the customer is VIP.",
-				  refs: [
-					{ text: "Nested conditions in StudioX", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/nested-conditions" }
-				  ]
-				},
-				{
-				  title: "3.9 Validation Rules",
-				  expLabel: "Explanation:",
-				  exp: "Used to check whether input data is valid before processing it.",
-				  exLabel: "Example:",
-				  ex: "Check whether an email field contains the “@” character.",
-				  refs: [
-					{ text: "Validation rules in StudioX", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/validation-rules" }
-				  ]
-				},
-				{
-				  title: "3.10 Debugging Tools",
-				  expLabel: "Explanation:",
-				  exp: "Tools that help inspect errors, monitor workflows, and identify why a process fails.",
-				  exLabel: "Example:",
-				  ex: "Use a breakpoint to inspect variable values step by step.",
-				  refs: [
-					{ text: "Debugging tools in StudioX", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/debugging-tools" }
-				  ]
-				}
-			  ]
-			},
+            title: "Level 3 - Advanced StudioX",
+            intro: "Level 3 covers more advanced automation scenarios such as multi-workbook processing, relative selectors, complex extraction and debugging.",
+            goalsTitle: "Learning objectives",
+            goals: [
+              "Automate Excel formulas",
+              "Process multiple workbooks at once",
+              "Work with relative selectors",
+              "Extract table data and handle multi-page content",
+              "Process email and attachments more intelligently",
+              "Use nested conditions and validation logic",
+              "Debug workflows more effectively"
+            ],
+            refsTitle: "References",
+            refs: [
+              { text: "Formula automation in StudioX", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/formula-automation" },
+              { text: "Debugging tools in StudioX", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/debugging-tools" }
+            ],
+            skills: [
+              { title: "3.1 Formula Automation", expLabel: "Explanation:", exp: "Use Excel formulas inside StudioX to calculate and process data automatically without manual steps.", exLabel: "Example:", ex: "Compute total amount = quantity × unit price for each line item.", refs: [{ text: "Formula automation in StudioX", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/formula-automation" }] },
+              { title: "3.2 Multiple Workbook Processing", expLabel: "Explanation:", exp: "This allows a single workflow to process many Excel files in a folder and consolidate the results.", exLabel: "Example:", ex: "Open each workbook, read the data and produce one final summary report.", refs: [{ text: "Multiple workbook processing", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/multiple-workbook-processing" }] },
+              { title: "3.3 Relative Selectors", expLabel: "Explanation:", exp: "Relative selectors identify UI or web elements based on their relative position, making workflows more stable.", exLabel: "Example:", ex: "Click the Edit button beside a specific row in a table.", refs: [{ text: "Relative selectors in StudioX", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/relative-selectors" }] },
+              { title: "3.4 Table Extraction", expLabel: "Explanation:", exp: "Extract structured data from websites or apps into Excel or a DataTable for further processing.", exLabel: "Example:", ex: "Capture a product list and price table from a website into Excel.", refs: [{ text: "Table extraction in StudioX", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/table-extraction" }] },
+              { title: "3.5 Pagination Handling", expLabel: "Explanation:", exp: "Use this when a website or app splits data across multiple pages and the workflow must continue across all pages.", exLabel: "Example:", ex: "Collect customer records from pages 1 to 10 into a single dataset.", refs: [{ text: "Pagination handling", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/pagination-handling" }] },
+              { title: "3.6 Mail Filtering and Attachment Processing", expLabel: "Explanation:", exp: "This covers filtering emails by sender, subject or timestamp and processing attachments in a structured way.", exLabel: "Example:", ex: "Grab only emails with Invoice in the subject and save all attachments to a dedicated folder.", refs: [{ text: "Mail filtering in StudioX", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/mail-filtering" }, { text: "Attachment processing", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/attachment-processing" }] },
+              { title: "3.7 Nested Conditions and Validation", expLabel: "Explanation:", exp: "Nested conditions and validation rules help the workflow make better decisions and catch invalid input before processing.", exLabel: "Example:", ex: "If a customer is VIP and the order value is high, apply a special rule; otherwise validate the email before saving data.", refs: [{ text: "Nested conditions in StudioX", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/nested-conditions" }, { text: "Validation rules in StudioX", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/validation-rules" }] },
+              { title: "3.8 Debugging Tools", expLabel: "Explanation:", exp: "Debugging tools such as breakpoints, step-through and watch values help identify the root cause of errors in a workflow.", exLabel: "Example:", ex: "Pause the workflow at a specific step and inspect variable values to see why the logic takes the wrong branch.", refs: [{ text: "Debugging tools in StudioX", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/debugging-tools" }] }
+            ]
+          },
           4: {
-			  title: "Level 4 - Professional",
-			  intro: "Level 4 is designed for learners who want to understand automation deployment and management at a more professional level. In this level, you will learn about publishing processes, managing assets, queues, triggers, credentials, configuration, environment variables, AI Center, Document Understanding, GPT/OpenAI, and workflow reuse.",
-			  goalsTitle: "Learning Objectives",
-			  goals: [
-				"Publish and deploy processes",
-				"Understand how to manage configuration data and sensitive information",
-				"Work with Orchestrator assets, queues, and triggers",
-				"Use reusable workflows",
-				"Understand the basics of AI Center, Document Understanding, and GPT/OpenAI"
-			  ],
-			  refsTitle: "References",
-			  refs: [
-				{ text: "Publish process in StudioX", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/publish-process" },
-				{ text: "Assets in Orchestrator", url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/assets" }
-			  ],
-			  skills: [
-				{
-				  title: "3.1 Publish Process",
-				  expLabel: "Explanation:",
-				  exp: "Publishing packages a workflow from StudioX and sends it to Orchestrator so it can be run, shared, or deployed.",
-				  exLabel: "Example:",
-				  ex: "After building an email-processing workflow, publish it to Orchestrator to run on a schedule.",
-				  refs: [
-					{ text: "Publish process in StudioX", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/publish-process" }
-				  ]
-				},
-				{
-				  title: "3.2 Assets Management",
-				  expLabel: "Explanation:",
-				  exp: "Assets store shared values such as paths, file names, or configuration data in Orchestrator.",
-				  exLabel: "Example:",
-				  ex: "Store a report folder path in an asset so it can be changed without editing the workflow.",
-				  refs: [
-					{ text: "Assets in Orchestrator", url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/assets" }
-				  ]
-				},
-				{
-				  title: "3.3 Queues Management",
-				  expLabel: "Explanation:",
-				  exp: "Queues manage work items in a structured order, especially when many items must be processed one by one.",
-				  exLabel: "Example:",
-				  ex: "Add a list of invoices to a queue and process them individually.",
-				  refs: [
-					{ text: "Queues in Orchestrator", url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/queues" }
-				  ]
-				},
-				{
-				  title: "3.4 Triggers",
-				  expLabel: "Explanation:",
-				  exp: "Triggers automatically run a process based on time or events.",
-				  exLabel: "Example:",
-				  ex: "Set a trigger to run the workflow every day at 8:00 AM.",
-				  refs: [
-					{ text: "Triggers in Orchestrator", url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/triggers" }
-				  ]
-				},
-				{
-				  title: "3.5 Credential Management",
-				  expLabel: "Explanation:",
-				  exp: "Used to store and manage login information securely.",
-				  exLabel: "Example:",
-				  ex: "Store a website username and password in Orchestrator instead of hardcoding them in the workflow.",
-				  refs: [
-					{ text: "Credentials in Orchestrator", url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/credentials" }
-				  ]
-				},
-				{
-				  title: "3.6 Config Files",
-				  expLabel: "Explanation:",
-				  exp: "Configuration files store parameters such as paths, recipient emails, or sheet names to make workflows easier to maintain.",
-				  exLabel: "Example:",
-				  ex: "Use an Excel config file to change the recipient email without modifying the logic.",
-				  refs: [
-					{ text: "Configuration files", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/configuration-files" }
-				  ]
-				},
-				{
-				  title: "3.7 Environment Variables",
-				  expLabel: "Explanation:",
-				  exp: "Environment variables are values that can change depending on the machine or runtime environment.",
-				  exLabel: "Example:",
-				  ex: "Use environment variables to define the working folder on test and production machines.",
-				  refs: [
-					{ text: "Environment variables in Orchestrator", url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/environment-variables" }
-				  ]
-				},
-				{
-				  title: "3.8 AI Center Basics",
-				  expLabel: "Explanation:",
-				  exp: "AI Center is used to deploy and manage AI models for intelligent automation.",
-				  exLabel: "Example:",
-				  ex: "Use an AI model to classify documents before processing them.",
-				  refs: [
-					{ text: "AI Center overview", url: "https://docs.uipath.com/ai-center/automation-cloud/latest/user-guide/ai-center-overview" }
-				  ]
-				},
-				{
-				  title: "3.9 Document Understanding",
-				  expLabel: "Explanation:",
-				  exp: "Document Understanding helps read, classify, and extract data from documents such as invoices, forms, and statements.",
-				  exLabel: "Example:",
-				  ex: "Extract invoice number, invoice date, and total amount from a PDF file.",
-				  refs: [
-					{ text: "Document Understanding overview", url: "https://docs.uipath.com/document-understanding/automation-cloud/latest/user-guide/about-document-understanding" }
-				  ]
-				},
-				{
-				  title: "3.10 GPT/OpenAI Integration",
-				  expLabel: "Explanation:",
-				  exp: "GPT/OpenAI integration allows workflows to generate content, summarize text, or support natural language processing tasks.",
-				  exLabel: "Example:",
-				  ex: "Use GPT to summarize an email before saving it to Excel.",
-				  refs: [
-					{ text: "GPT/OpenAI integration in UiPath", url: "https://docs.uipath.com/ai-center/automation-cloud/latest/user-guide/openai-integration" }
-				  ]
-				},
-				{
-				  title: "3.11 Workflow Reuse",
-				  expLabel: "Explanation:",
-				  exp: "Reusable workflows are designed so that common steps can be used across multiple automation projects.",
-				  exLabel: "Example:",
-				  ex: "Create a separate workflow for sending notification emails and reuse it in multiple automations.",
-				  refs: [
-					{ text: "Reusable workflows", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/reusable-workflows" }
-				  ]
-				},
-				{
-				  title: "3.12 Library Usage",
-				  expLabel: "Explanation:",
-				  exp: "A library is a collection of reusable components or workflows that helps standardize development and save time.",
-				  exLabel: "Example:",
-				  ex: "Create a library containing standard file-processing steps for other projects to reuse.",
-				  refs: [
-					{ text: "Libraries in UiPath", url: "https://docs.uipath.com/studio/automation-cloud/latest/user-guide/about-libraries" }
-				  ]
-				}
-			  ]
-			},
+            title: "Level 4 - Professional",
+            intro: "Level 4 is designed for learners who want to move beyond individual task automation and operate production-ready automations: publishing, scheduling, monitoring, secure configuration and governance in Orchestrator.",
+            goalsTitle: "Learning objectives",
+            goals: [
+              "Publish and deploy process from StudioX",
+              "Understand Orchestrator operations and automation governance",
+              "Manage assets, queues and triggers",
+              "Protect sensitive data and environment configuration",
+              "Handle exceptions, retries and notifications",
+              "Understand AI and Document Understanding at a basic level"
+            ],
+            refsTitle: "References",
+            refs: [
+              { text: "Publish process in StudioX", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/publish-process" },
+              { text: "Assets in Orchestrator", url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/assets" },
+              { text: "Queues in Orchestrator", url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/queues" }
+            ],
+            skills: [
+              { title: "4.1 Publish and deploy process", expLabel: "Explanation:", exp: "Publishing packages a workflow from StudioX and makes it available in Orchestrator, where it can be run, scheduled and monitored in a controlled environment.", exLabel: "Example:", ex: "After building an invoice-processing workflow, you publish it to Orchestrator and schedule it to run daily in production.", refs: [{ text: "Publish process in StudioX", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/publish-process" }] },
+              { title: "4.2 Assets and shared configuration", expLabel: "Explanation:", exp: "Assets store values such as folder paths, email addresses and parameter settings that are shared across workflows. This makes automation easier to maintain.", exLabel: "Example:", ex: "Store the report folder path in an asset so it can be updated without editing the workflow.", refs: [{ text: "Assets in Orchestrator", url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/assets" }, { text: "Environment variables in Orchestrator", url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/environment-variables" }] },
+              { title: "4.3 Queues and work-item processing", expLabel: "Explanation:", exp: "Queues help manage a list of work items in sequence, which is ideal when many tasks need to be processed consistently and monitored individually.", exLabel: "Example:", ex: "Put a list of invoices into a queue so each invoice is processed one by one and tracked by status.", refs: [{ text: "Queues in Orchestrator", url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/queues" }] },
+              { title: "4.4 Triggers and scheduling", expLabel: "Explanation:", exp: "Triggers allow automation to run automatically according to a calendar schedule or a business event, reducing manual intervention.", exLabel: "Example:", ex: "Schedule a report-generation process every morning at 8:00 AM.", refs: [{ text: "Triggers in Orchestrator", url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/triggers" }] },
+              { title: "4.5 Credentials and secure data handling", expLabel: "Explanation:", exp: "Sensitive information such as usernames, passwords and tokens should not be hardcoded into workflows. Orchestrator provides safer ways to store and use such data.", exLabel: "Example:", ex: "Store website credentials in a secure credential store instead of embedding them directly in the workflow.", refs: [{ text: "Credentials in Orchestrator", url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/credentials" }] },
+              { title: "4.6 Exception handling and retry", expLabel: "Explanation:", exp: "Production automation needs error handling, retry logic and clear logging so that failures do not stop the whole process without an alert or recovery plan.", exLabel: "Example:", ex: "If a source file is missing or the path is wrong, the robot logs the error and retries based on the configured policy.", refs: [{ text: "Exception handling in StudioX", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/exception-handling" }] },
+              { title: "4.7 Monitoring, logging and governance", expLabel: "Explanation:", exp: "Professional automation requires monitoring via job logs, status checks, alerts and governance rules across folders, environments and user roles.", exLabel: "Example:", ex: "Check Orchestrator job history to see which process failed and whether the issue is due to data quality or system downtime.", refs: [{ text: "Monitoring in Orchestrator", url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/monitoring" }] },
+              { title: "4.8 Reusability in StudioX", expLabel: "Explanation:", exp: "Even in StudioX, you can design reusable workflows for repeating actions such as email notifications, file handling and data cleanup.", exLabel: "Example:", ex: "Create a separate workflow for sending notifications and reuse it in multiple automation processes.", refs: [{ text: "Reusable workflows", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/reusable-workflows" }] },
+              { title: "4.9 AI and Document Understanding overview", expLabel: "Explanation:", exp: "At this level, learners should understand the concept of AI Center, Document Understanding and OpenAI/GPT support as optional enhancements to automation, without needing deep technical implementation details.", exLabel: "Example:", ex: "Use AI to extract invoice details from a PDF or summarize email content before saving it to Excel.", refs: [{ text: "AI Center overview", url: "https://docs.uipath.com/ai-center/automation-cloud/latest/user-guide/ai-center-overview" }, { text: "Document Understanding overview", url: "https://docs.uipath.com/document-understanding/automation-cloud/latest/user-guide/about-document-understanding" }] }
+            ]
+          }
         }
       }
     };
 
+    const levelContainer = document.getElementById('levelContainer');
+    const tabs = document.querySelectorAll('.tab-btn');
+    const langButtons = document.querySelectorAll('.lang-btn');
+
     let currentLang = 'vi';
     let currentLevel = 1;
 
-    function setLanguage(lang){
-      currentLang = lang;
-      document.getElementById('btnVi').classList.toggle('active', lang === 'vi');
-      document.getElementById('btnEn').classList.toggle('active', lang === 'en');
-      document.documentElement.lang = lang;
-      render();
-    }
-
-    function showLevel(level){
-      currentLevel = level;
-      document.querySelectorAll('.tab-btn').forEach((b, i) => b.classList.toggle('active', i === level - 1));
-      render();
-    }
-
-    function renderRefs(refs){
-      return refs.map(r => `<li><a href="${r.url}" target="_blank">${r.text}</a></li>`).join('');
-    }
-
-    function renderSkills(skills){
-      return skills.map(s => `
+    function renderLevel(level) {
+      const data = contentData[currentLang].levels[level];
+      const skills = data.skills.map(skill => `
         <div class="skill">
-          <h4>${s.title}</h4>
-          <p><span class="label">${s.expLabel}</span> ${s.exp}</p>
-          <p><span class="label">${s.exLabel}</span> ${s.ex}</p>
-          <p class="ref"><span class="label">${currentLang === 'vi' ? 'Tham khảo UiPath Docs:' : 'UiPath Docs Reference:'}</span></p>
-          <ul>${renderRefs(s.refs)}</ul>
+          <h4>${skill.title}</h4>
+          <div><span class="label">${skill.expLabel}</span> ${skill.exp}</div>
+          <div style="margin-top:8px;"><span class="label">${skill.exLabel}</span> ${skill.ex}</div>
+          <div class="ref" style="margin-top:10px;">
+            ${skill.refs.map(ref => `<div><a href="${ref.url}" target="_blank" rel="noreferrer">${ref.text}</a></div>`).join('')}
+          </div>
         </div>
       `).join('');
-    }
 
-    function render(){
-      const data = contentData[currentLang];
-      const level = data.levels[currentLevel];
+      const refs = data.refs.map(ref => `<li><a href="${ref.url}" target="_blank" rel="noreferrer">${ref.text}</a></li>`).join('');
+      const goals = data.goals.map(goal => `<li>${goal}</li>`).join('');
 
-      document.getElementById('appTitle').innerText = data.appTitle;
-      document.getElementById('appSubtitle').innerText = data.appSubtitle;
-      document.getElementById('langLabel').innerText = data.langLabel;
-      document.getElementById('hintText').innerText = data.hintText;
-      document.getElementById('footerText').innerText = data.footerText;
+      levelContainer.innerHTML = `
+        <div class="panel active card">
+          <h2>${data.title}</h2>
+          <p>${data.intro}</p>
 
-      document.getElementById('tab1').innerText = data.tabs[0];
-      document.getElementById('tab2').innerText = data.tabs[1];
-      document.getElementById('tab3').innerText = data.tabs[2];
-      document.getElementById('tab4').innerText = data.tabs[3];
-
-      const html = `
-        <div class="card">
-          <h2>${level.title}</h2>
-          <p>${level.intro}</p>
           <div class="grid-2">
             <div>
-              <h3>${level.goalsTitle}</h3>
-              <ul>${level.goals.map(g => `<li>${g}</li>`).join('')}</ul>
+              <h3>${data.goalsTitle}</h3>
+              <ul>${goals}</ul>
             </div>
             <div>
-              <h3>${level.refsTitle}</h3>
-              <ul>${renderRefs(level.refs)}</ul>
+              <h3>${data.refsTitle}</h3>
+              <ul class="ref">${refs}</ul>
             </div>
           </div>
-          ${renderSkills(level.skills)}
+
+          <div>${skills}</div>
         </div>
       `;
-      document.getElementById('levelContainer').innerHTML = html;
     }
 
-    window.onload = function(){
+    function setLanguage(lang) {
+      currentLang = lang;
+      currentLang === 'vi'
+        ? document.documentElement.lang = 'vi'
+        : document.documentElement.lang = 'en';
+
+      const t = contentData[lang];
+      document.getElementById('appTitle').textContent = t.appTitle;
+      document.getElementById('appSubtitle').textContent = t.appSubtitle;
+      document.getElementById('langLabel').textContent = t.langLabel;
+      document.getElementById('hintText').textContent = t.hintText;
+      document.getElementById('footerText').textContent = t.footerText;
+
+      tabs.forEach((tab, idx) => { tab.textContent = t.tabs[idx]; });
+      langButtons.forEach(btn => btn.classList.toggle('active', btn.id === (lang === 'vi' ? 'btnVi' : 'btnEn')));
+      renderLevel(currentLevel);
+    }
+
+    function showLevel(level) {
+      currentLevel = level;
+      tabs.forEach((tab, idx) => tab.classList.toggle('active', idx + 1 === level));
+      renderLevel(level);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
       setLanguage('vi');
       showLevel(1);
-    };
+    });
   </script>
 </body>
 </html>
