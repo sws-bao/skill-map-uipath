@@ -96,6 +96,7 @@
       <button class="tab-btn" onclick="showLevel(2)" id="tab2">Level 2 - Business User</button>
       <button class="tab-btn" onclick="showLevel(3)" id="tab3">Level 3 - Advanced StudioX</button>
       <button class="tab-btn" onclick="showLevel(4)" id="tab4">Level 4 - Professional</button>
+	  <button class="tab-btn" onclick="showLevel(5)" id="tab5">Assessment</button>
     </div>
 
     <div id="levelContainer"></div>
@@ -111,7 +112,7 @@
         langLabel: "Chọn ngôn ngữ / Select language:",
         hintText: "Click tab để chuyển level, nội dung sẽ đổi theo ngôn ngữ đã chọn.",
         footerText: "UiPath StudioX Training Document — Master HTML with real VN/EN toggle",
-        tabs: ["Level 1 - Foundation", "Level 2 - Business User", "Level 3 - Advanced StudioX", "Level 4 - Professional"],
+        tabs: ["Level 1 - Foundation", "Level 2 - Business User", "Level 3 - Advanced StudioX", "Level 4 - Professional","Assessment"],
         levels: {
           1: {
 			  title: "Level 1 - Foundation",
@@ -653,7 +654,33 @@
 				}
 			  ]
 			},
-        }
+		  5: {
+				title: "Kiểm tra đánh giá",
+				  intro: "Hoàn thành bài kiểm tra sau khi học xong từng cấp độ.",
+				  forms: [
+					{
+					  title: "Level 1 - Foundation Test",
+					  description: "Kiểm tra kiến thức cơ bản về UiPath.",
+					  url: "https://forms.cloud.microsoft/r/KjMvxJ9tuh"
+					},
+					{
+					  title: "Level 2 - Business User Test",
+					  description: "Kiểm tra kiến thức Business User.",
+					  url: "https://forms.cloud.microsoft/r/ub4QKk8akm"
+					},
+					{
+					  title: "Level 3 - Advanced StudioX Test",
+					  description: "Kiểm tra kỹ năng StudioX.",
+					  url: "https://forms.cloud.microsoft/r/3VUgPJN2va"
+					},
+					{
+					  title: "Level 4 - Professional Test",
+					  description: "Kiểm tra năng lực Professional Developer.",
+					  url: "https://forms.cloud.microsoft/r/29zrqj0Qu5"
+					}
+				  ]
+				},
+		}
       },
       en: {
         appTitle: "UiPath StudioX Training Document",
@@ -661,7 +688,7 @@
         langLabel: "Chọn ngôn ngữ / Select language:",
         hintText: "Click a tab to switch levels; content updates based on the selected language.",
         footerText: "UiPath StudioX Training Document — Master HTML with real VN/EN toggle",
-        tabs: ["Level 1 - Foundation", "Level 2 - Business User", "Level 3 - Advanced StudioX", "Level 4 - Professional"],
+        tabs: ["Level 1 - Foundation", "Level 2 - Business User", "Level 3 - Advanced StudioX", "Level 4 - Professional", "Assessment"],
         levels: {
           1: {
 			  title: "Level 1 - Foundation",
@@ -1204,7 +1231,33 @@
 				}
 			  ]
 			},
-        }
+		  5: {
+			  title: "Assessment Center",
+			  intro: "Complete the assessment for each learning level.",
+			  forms: [
+				{
+				  title: "Level 1 - Foundation Test",
+				  description: "Foundation knowledge assessment.",
+				  url: "https://forms.cloud.microsoft/r/KjMvxJ9tuh"
+				},
+				{
+				  title: "Level 2 - Business User Test",
+				  description: "Business User assessment.",
+				  url: "https://forms.cloud.microsoft/r/ub4QKk8akm"
+				},
+				{
+				  title: "Level 3 - Advanced StudioX Test",
+				  description: "Advanced StudioX assessment.",
+				  url: "https://forms.cloud.microsoft/r/3VUgPJN2va"
+				},
+				{
+				  title: "Level 4 - Professional Test",
+				  description: "Professional developer assessment.",
+				  url: "https://forms.cloud.microsoft/r/29zrqj0Qu5"
+				}
+			  ]
+			},
+		}
       }
     };
 
@@ -1241,6 +1294,39 @@
       `).join('');
     }
 
+	function renderAssessment(level){
+
+	  return `
+		<div class="card">
+		  <h2>${level.title}</h2>
+		  <p>${level.intro}</p>
+
+		  ${level.forms.map(form => `
+			<div class="skill">
+			  <h4>${form.title}</h4>
+			  <p>${form.description}</p>
+
+			  <a
+				href="${form.url}"
+				target="_blank"
+				style="
+				  display:inline-block;
+				  background:#2563eb;
+				  color:white;
+				  padding:10px 20px;
+				  border-radius:8px;
+				  text-decoration:none;
+				  font-weight:600;
+				  margin-top:8px;
+				">
+				${currentLang === 'vi' ? 'Bắt đầu bài kiểm tra' : 'Start Assessment'}
+			  </a>
+			</div>
+		  `).join('')}
+		</div>
+	  `;
+	}
+
     function render(){
       const data = contentData[currentLang];
       const level = data.levels[currentLevel];
@@ -1255,6 +1341,13 @@
       document.getElementById('tab2').innerText = data.tabs[1];
       document.getElementById('tab3').innerText = data.tabs[2];
       document.getElementById('tab4').innerText = data.tabs[3];
+	  document.getElementById('tab5').innerText = data.tabs[4];
+
+	if(currentLevel === 5){
+	  document.getElementById('levelContainer').innerHTML =
+		renderAssessment(level);
+	  return;
+	}
 
       const html = `
         <div class="card">
