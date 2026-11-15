@@ -516,142 +516,167 @@
 			  ]
 			},
           4: {
-			  title: "Level 4 - Professional",
-			  intro: "Level 4 dành cho người học muốn hiểu cách triển khai và quản lý automation ở mức chuyên nghiệp hơn. Ở level này, bạn sẽ làm quen với việc publish process, quản lý assets, queues, triggers, credentials, cấu hình, biến môi trường, AI Center, Document Understanding, GPT/OpenAI và tái sử dụng workflow.",
+			  title: "Level 4 - Deployment & Operations",
+			  intro: "Level 4 giúp người học đưa workflow StudioX vào sử dụng trong công việc hằng ngày. Nội dung bao gồm chuẩn bị dữ liệu, quản lý phiên bản, khởi chạy, sử dụng cấu hình, theo dõi lịch chạy, kiểm tra kết quả, xử lý sự cố và bàn giao. Người học vận dụng kiến thức từ Level 1–3 để vận hành automation nhất quán và kiểm soát kết quả nghiệp vụ.",
 			  goalsTitle: "Mục tiêu học tập",
 			  goals: [
-				"Publish và triển khai process",
-				"Hiểu cách quản lý dữ liệu cấu hình và thông tin nhạy cảm",
-				"Làm việc với Orchestrator assets, queues, triggers",
-				"Sử dụng workflow tái sử dụng",
-				"Nắm được các khái niệm AI Center, Document Understanding, GPT/OpenAI ở mức cơ bản"
+			    "Chuẩn bị dữ liệu và điều kiện chạy automation",
+			    "Nhận biết phiên bản và theo dõi thay đổi",
+			    "Khởi chạy và kiểm tra trạng thái thực thi",
+			    "Sử dụng cấu hình và bảo vệ thông tin đăng nhập",
+			    "Xác định lịch chạy phù hợp với nghiệp vụ",
+			    "Theo dõi và đối chiếu kết quả xử lý",
+			    "Ghi nhận sự cố và chuẩn bị chạy lại an toàn",
+			    "Xây dựng hướng dẫn vận hành và bàn giao"
 			  ],
 			  refsTitle: "Tham khảo",
 			  refs: [
-				{ text: "Publish process in StudioX", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/publish-process" },
-				{ text: "Assets in Orchestrator", url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/assets" }
+			    {
+			      text: "Orchestrator — About Processes",
+			      url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/about-processes"
+			    },
+			    {
+			      text: "Orchestrator — About Jobs",
+			      url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/about-jobs"
+			    },
+			    {
+			      text: "Orchestrator — About Assets",
+			      url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/about-assets"
+			    }
 			  ],
 			  skills: [
-				{
-				  title: "3.1 Publish Process",
-				  expLabel: "Giải thích:",
-				  exp: "Publish là bước đóng gói workflow từ StudioX và đưa lên Orchestrator để có thể chạy, chia sẻ hoặc triển khai.",
-				  exLabel: "Ví dụ:",
-				  ex: "Sau khi tạo xong quy trình xử lý email, bạn publish lên Orchestrator để chạy theo lịch.",
-				  refs: [
-					{ text: "Publish process in StudioX", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/publish-process" }
-				  ]
-				},
-				{
-				  title: "3.2 Assets Management",
-				  expLabel: "Giải thích:",
-				  exp: "Assets là nơi lưu các giá trị dùng chung như đường dẫn, tên file, hoặc thông tin cấu hình trong Orchestrator.",
-				  exLabel: "Ví dụ:",
-				  ex: "Lưu đường dẫn thư mục báo cáo vào một asset để dễ thay đổi mà không cần sửa workflow.",
-				  refs: [
-					{ text: "Assets in Orchestrator", url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/assets" }
-				  ]
-				},
-				{
-				  title: "3.3 Queues Management",
-				  expLabel: "Giải thích:",
-				  exp: "Queue dùng để quản lý các công việc cần xử lý theo hàng đợi, đặc biệt khi có nhiều item cần xử lý lần lượt.",
-				  exLabel: "Ví dụ:",
-				  ex: "Đưa danh sách hóa đơn vào queue để xử lý từng hóa đơn một.",
-				  refs: [
-					{ text: "Queues in Orchestrator", url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/queues" }
-				  ]
-				},
-				{
-				  title: "3.4 Triggers",
-				  expLabel: "Giải thích:",
-				  exp: "Trigger dùng để tự động chạy process theo thời gian hoặc theo sự kiện.",
-				  exLabel: "Ví dụ:",
-				  ex: "Thiết lập trigger để workflow chạy mỗi sáng lúc 8 giờ.",
-				  refs: [
-					{ text: "Triggers in Orchestrator", url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/triggers" }
-				  ]
-				},
-				{
-				  title: "3.5 Credential Management",
-				  expLabel: "Giải thích:",
-				  exp: "Dùng để lưu và quản lý thông tin đăng nhập một cách an toàn.",
-				  exLabel: "Ví dụ:",
-				  ex: "Lưu username và password của website trong Orchestrator thay vì ghi trực tiếp trong workflow.",
-				  refs: [
-					{ text: "Credentials in Orchestrator", url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/credentials" }
-				  ]
-				},
-				{
-				  title: "3.6 Config Files",
-				  expLabel: "Giải thích:",
-				  exp: "File cấu hình giúp lưu các tham số như đường dẫn, email người nhận, hoặc tên sheet để workflow dễ bảo trì.",
-				  exLabel: "Ví dụ:",
-				  ex: "Dùng file Excel config để thay đổi địa chỉ email mà không cần sửa logic.",
-				  refs: [
-					{ text: "Configuration files", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/configuration-files" }
-				  ]
-				},
-				{
-				  title: "3.7 Environment Variables",
-				  expLabel: "Giải thích:",
-				  exp: "Biến môi trường là các giá trị có thể thay đổi theo máy tính hoặc môi trường chạy khác nhau.",
-				  exLabel: "Ví dụ:",
-				  ex: "Dùng biến môi trường để xác định thư mục làm việc trên máy test và máy production.",
-				  refs: [
-					{ text: "Environment variables in Orchestrator", url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/environment-variables" }
-				  ]
-				},
-				{
-				  title: "3.8 AI Center Basics",
-				  expLabel: "Giải thích:",
-				  exp: "AI Center là nơi triển khai và quản lý mô hình AI phục vụ tự động hóa thông minh.",
-				  exLabel: "Ví dụ:",
-				  ex: "Dùng mô hình AI để phân loại tài liệu trước khi xử lý.",
-				  refs: [
-					{ text: "AI Center overview", url: "https://docs.uipath.com/ai-center/automation-cloud/latest/user-guide/ai-center-overview" }
-				  ]
-				},
-				{
-				  title: "3.9 Document Understanding",
-				  expLabel: "Giải thích:",
-				  exp: "Document Understanding giúp đọc, phân loại và trích xuất dữ liệu từ tài liệu như hóa đơn, phiếu, biểu mẫu.",
-				  exLabel: "Ví dụ:",
-				  ex: "Trích xuất số hóa đơn, ngày hóa đơn và tổng tiền từ file PDF.",
-				  refs: [
-					{ text: "Document Understanding overview", url: "https://docs.uipath.com/document-understanding/automation-cloud/latest/user-guide/about-document-understanding" }
-				  ]
-				},
-				{
-				  title: "3.10 GPT/OpenAI Integration",
-				  expLabel: "Giải thích:",
-				  exp: "Tích hợp GPT/OpenAI giúp workflow có thể tạo nội dung, tóm tắt hoặc hỗ trợ xử lý ngôn ngữ tự nhiên.",
-				  exLabel: "Ví dụ:",
-				  ex: "Dùng GPT để tóm tắt nội dung email trước khi lưu vào Excel.",
-				  refs: [
-					{ text: "GPT/OpenAI integration in UiPath", url: "https://docs.uipath.com/ai-center/automation-cloud/latest/user-guide/openai-integration" }
-				  ]
-				},
-				{
-				  title: "3.11 Workflow Reuse",
-				  expLabel: "Giải thích:",
-				  exp: "Tái sử dụng workflow nghĩa là thiết kế các phần dùng chung để có thể dùng lại ở nhiều quy trình khác nhau.",
-				  exLabel: "Ví dụ:",
-				  ex: "Tạo một workflow riêng để gửi email thông báo và dùng lại trong nhiều automation.",
-				  refs: [
-					{ text: "Reusable workflows", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/reusable-workflows" }
-				  ]
-				},
-				{
-				  title: "3.12 Library Usage",
-				  expLabel: "Giải thích:",
-				  exp: "Library là tập hợp các thành phần hoặc workflow dùng chung, giúp chuẩn hóa và tiết kiệm thời gian phát triển.",
-				  exLabel: "Ví dụ:",
-				  ex: "Tạo library chứa các bước xử lý file chuẩn để các dự án khác dùng lại.",
-				  refs: [
-					{ text: "Libraries in UiPath", url: "https://docs.uipath.com/studio/automation-cloud/latest/user-guide/about-libraries" }
-				  ]
-				}
+			    {
+			      title: "4.1 Operational Readiness",
+			      expLabel: "Giải thích:",
+			      exp: "Chuẩn bị automation trước khi chạy bằng cách kiểm tra dữ liệu đầu vào, kỳ xử lý, đường dẫn, ứng dụng và người nhận kết quả. Sử dụng checklist để xác nhận các điều kiện cần thiết và bảo đảm dữ liệu phù hợp với quy trình.",
+			      exLabel: "Ví dụ:",
+			      ex: "Trước khi chạy báo cáo tháng, kiểm tra file nguồn đúng kỳ, đủ cột bắt buộc, thư mục đầu ra truy cập được và danh sách người nhận đã được xác nhận.",
+			      refs: [
+			        {
+			          text: "Orchestrator — About Processes",
+			          url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/about-processes"
+			        },
+			        {
+			          text: "Orchestrator — About Jobs",
+			          url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/about-jobs"
+			        }
+			      ]
+			    },
+			    {
+			      title: "4.2 Release and Version Tracking",
+			      expLabel: "Giải thích:",
+			      exp: "Nhận biết package, phiên bản đang sử dụng và nội dung thay đổi của automation. Theo dõi thông tin phát hành, ghi nhận kết quả kiểm tra và xác nhận phiên bản phù hợp trước khi đưa vào sử dụng.",
+			      exLabel: "Ví dụ:",
+			      ex: "Phiên bản mới của quy trình báo cáo bổ sung kiểm tra dữ liệu rỗng. Người học ghi nhận thay đổi, kiểm tra báo cáo mẫu và cập nhật thông tin phiên bản trong hướng dẫn vận hành.",
+			      refs: [
+			        {
+			          text: "Orchestrator — Managing Packages",
+			          url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/managing-packages"
+			        },
+			        {
+			          text: "Orchestrator — Managing Processes",
+			          url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/managing-processes"
+			        }
+			      ]
+			    },
+			    {
+			      title: "4.3 Starting and Checking Automation",
+			      expLabel: "Giải thích:",
+			      exp: "Khởi chạy automation theo hướng dẫn và theo dõi trạng thái thực thi. Tìm hiểu mối liên hệ giữa process và job trên Orchestrator, nhận biết lần chạy đang chờ, đang xử lý, hoàn tất hoặc gặp lỗi.",
+			      exLabel: "Ví dụ:",
+			      ex: "Khởi chạy quy trình tổng hợp báo cáo, theo dõi trạng thái lần chạy và kiểm tra thông báo hoàn tất cùng file đầu ra.",
+			      refs: [
+			        {
+			          text: "Orchestrator — About Processes",
+			          url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/about-processes"
+			        },
+			        {
+			          text: "Orchestrator — About Jobs",
+			          url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/about-jobs"
+			        }
+			      ]
+			    },
+			    {
+			      title: "4.4 Configuration and Data Protection",
+			      expLabel: "Giải thích:",
+			      exp: "Xác định các giá trị cấu hình mà automation sử dụng, như đường dẫn, tên file và người nhận báo cáo. Tìm hiểu vai trò của assets và credential assets; sử dụng nguồn cấu hình được phê duyệt và bảo vệ thông tin đăng nhập, dữ liệu nghiệp vụ.",
+			      exLabel: "Ví dụ:",
+			      ex: "Kiểm tra thư mục đầu ra và người nhận trong nguồn cấu hình của quy trình. Khi ghi nhận lỗi đăng nhập, cung cấp thông tin cần thiết và giữ an toàn dữ liệu nhạy cảm.",
+			      refs: [
+			        {
+			          text: "Orchestrator — About Assets",
+			          url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/about-assets"
+			        }
+			      ]
+			    },
+			    {
+			      title: "4.5 Scheduling and Time Triggers",
+			      expLabel: "Giải thích:",
+			      exp: "Xác định lịch chạy theo nhu cầu nghiệp vụ, bao gồm thời điểm chạy, múi giờ và thời điểm dữ liệu sẵn sàng. Tìm hiểu cách time triggers trên Orchestrator khởi tạo việc chạy process và kiểm tra kết quả sau khi lịch được thiết lập hoặc thay đổi.",
+			      exLabel: "Ví dụ:",
+			      ex: "Lập lịch báo cáo lúc 8:00 sau khi dữ liệu nguồn hoàn tất lúc 7:30. Xác nhận múi giờ, theo dõi lần chạy đầu và đối chiếu thời điểm thực thi với lịch đã thống nhất.",
+			      refs: [
+			        {
+			          text: "Orchestrator — Time Triggers",
+			          url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/time-triggers"
+			        },
+			        {
+			          text: "Orchestrator — About Jobs",
+			          url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/about-jobs"
+			        }
+			      ]
+			    },
+			    {
+			      title: "4.6 Monitoring and Result Reconciliation",
+			      expLabel: "Giải thích:",
+			      exp: "Theo dõi trạng thái, thời gian chạy và thông tin lỗi. Kiểm tra đầu ra theo tiêu chí nghiệp vụ như kỳ dữ liệu, số bản ghi, số liệu tổng hợp và người nhận. Sử dụng thông tin thực thi và log để hỗ trợ đối chiếu kết quả.",
+			      exLabel: "Ví dụ:",
+			      ex: "Sau khi chạy báo cáo, đối chiếu 100 bản ghi đầu vào với 95 bản ghi thành công và 5 bản ghi bị từ chối theo quy tắc. Kiểm tra nguyên nhân của các bản ghi bị từ chối và xác nhận báo cáo đúng kỳ.",
+			      refs: [
+			        {
+			          text: "Orchestrator — About Jobs",
+			          url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/about-jobs"
+			        },
+			        {
+			          text: "Orchestrator — Robot Logs",
+			          url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/robot-logs"
+			        }
+			      ]
+			    },
+			    {
+			      title: "4.7 Incident Handling and Safe Rerun",
+			      expLabel: "Giải thích:",
+			      exp: "Ghi nhận tên automation, thời điểm chạy, thông báo lỗi và phần công việc đã hoàn thành. Dựa vào trạng thái xử lý và hướng dẫn vận hành để lựa chọn bước xử lý tiếp theo, chuẩn bị chạy lại hoặc chuyển thông tin sự cố cho người phụ trách.",
+			      exLabel: "Ví dụ:",
+			      ex: "Quy trình dừng sau khi gửi một phần email báo cáo. Người học kiểm tra danh sách đã gửi, ghi nhận phần còn lại và xác nhận phương án tiếp tục xử lý theo hướng dẫn vận hành.",
+			      refs: [
+			        {
+			          text: "Orchestrator — About Jobs",
+			          url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/about-jobs"
+			        },
+			        {
+			          text: "Orchestrator — Robot Logs",
+			          url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/robot-logs"
+			        }
+			      ]
+			    },
+			    {
+			      title: "4.8 Operational Handover and Change Records",
+			      expLabel: "Giải thích:",
+			      exp: "Xây dựng hướng dẫn vận hành gồm mục đích, đầu vào, đầu ra, điều kiện chạy, cách khởi chạy, cách kiểm tra kết quả và đầu mối hỗ trợ. Ghi nhận phiên bản, thay đổi và kết quả kiểm tra để người tiếp nhận có thể sử dụng automation nhất quán.",
+			      exLabel: "Ví dụ:",
+			      ex: "Bàn giao quy trình báo cáo bằng hướng dẫn ngắn và checklist. Khi cấu trúc file nguồn thay đổi, cập nhật thông tin, ghi nhận kết quả kiểm tra và bổ sung hướng dẫn tương ứng.",
+			      refs: [
+			        {
+			          text: "Orchestrator — Managing Packages",
+			          url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/managing-packages"
+			        },
+			        {
+			          text: "Orchestrator — Managing Processes",
+			          url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/managing-processes"
+			        }
+			      ]
+			    }
 			  ]
 			},
 		  5: {
@@ -1093,142 +1118,167 @@
 			  ]
 			},
           4: {
-			  title: "Level 4 - Professional",
-			  intro: "Level 4 is designed for learners who want to understand automation deployment and management at a more professional level. In this level, you will learn about publishing processes, managing assets, queues, triggers, credentials, configuration, environment variables, AI Center, Document Understanding, GPT/OpenAI, and workflow reuse.",
+			  title: "Level 4 - Deployment & Operations",
+			  intro: "Level 4 helps learners put StudioX workflows into everyday operational use. It covers input preparation, version tracking, execution, configuration, scheduling, result checks, incident handling, and handover. Learners apply the skills from Levels 1–3 to operate automation consistently and verify business outcomes.",
 			  goalsTitle: "Learning Objectives",
 			  goals: [
-				"Publish and deploy processes",
-				"Understand how to manage configuration data and sensitive information",
-				"Work with Orchestrator assets, queues, and triggers",
-				"Use reusable workflows",
-				"Understand the basics of AI Center, Document Understanding, and GPT/OpenAI"
+			    "Prepare inputs and execution prerequisites",
+			    "Identify versions and track changes",
+			    "Start automation and check execution status",
+			    "Use configuration sources and protect credentials",
+			    "Identify schedules that meet business needs",
+			    "Monitor and reconcile processing results",
+			    "Record incidents and prepare for safe reruns",
+			    "Create operating instructions and handover records"
 			  ],
 			  refsTitle: "References",
 			  refs: [
-				{ text: "Publish process in StudioX", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/publish-process" },
-				{ text: "Assets in Orchestrator", url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/assets" }
+			    {
+			      text: "Orchestrator — About Processes",
+			      url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/about-processes"
+			    },
+			    {
+			      text: "Orchestrator — About Jobs",
+			      url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/about-jobs"
+			    },
+			    {
+			      text: "Orchestrator — About Assets",
+			      url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/about-assets"
+			    }
 			  ],
 			  skills: [
-				{
-				  title: "3.1 Publish Process",
-				  expLabel: "Explanation:",
-				  exp: "Publishing packages a workflow from StudioX and sends it to Orchestrator so it can be run, shared, or deployed.",
-				  exLabel: "Example:",
-				  ex: "After building an email-processing workflow, publish it to Orchestrator to run on a schedule.",
-				  refs: [
-					{ text: "Publish process in StudioX", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/publish-process" }
-				  ]
-				},
-				{
-				  title: "3.2 Assets Management",
-				  expLabel: "Explanation:",
-				  exp: "Assets store shared values such as paths, file names, or configuration data in Orchestrator.",
-				  exLabel: "Example:",
-				  ex: "Store a report folder path in an asset so it can be changed without editing the workflow.",
-				  refs: [
-					{ text: "Assets in Orchestrator", url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/assets" }
-				  ]
-				},
-				{
-				  title: "3.3 Queues Management",
-				  expLabel: "Explanation:",
-				  exp: "Queues manage work items in a structured order, especially when many items must be processed one by one.",
-				  exLabel: "Example:",
-				  ex: "Add a list of invoices to a queue and process them individually.",
-				  refs: [
-					{ text: "Queues in Orchestrator", url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/queues" }
-				  ]
-				},
-				{
-				  title: "3.4 Triggers",
-				  expLabel: "Explanation:",
-				  exp: "Triggers automatically run a process based on time or events.",
-				  exLabel: "Example:",
-				  ex: "Set a trigger to run the workflow every day at 8:00 AM.",
-				  refs: [
-					{ text: "Triggers in Orchestrator", url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/triggers" }
-				  ]
-				},
-				{
-				  title: "3.5 Credential Management",
-				  expLabel: "Explanation:",
-				  exp: "Used to store and manage login information securely.",
-				  exLabel: "Example:",
-				  ex: "Store a website username and password in Orchestrator instead of hardcoding them in the workflow.",
-				  refs: [
-					{ text: "Credentials in Orchestrator", url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/credentials" }
-				  ]
-				},
-				{
-				  title: "3.6 Config Files",
-				  expLabel: "Explanation:",
-				  exp: "Configuration files store parameters such as paths, recipient emails, or sheet names to make workflows easier to maintain.",
-				  exLabel: "Example:",
-				  ex: "Use an Excel config file to change the recipient email without modifying the logic.",
-				  refs: [
-					{ text: "Configuration files", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/configuration-files" }
-				  ]
-				},
-				{
-				  title: "3.7 Environment Variables",
-				  expLabel: "Explanation:",
-				  exp: "Environment variables are values that can change depending on the machine or runtime environment.",
-				  exLabel: "Example:",
-				  ex: "Use environment variables to define the working folder on test and production machines.",
-				  refs: [
-					{ text: "Environment variables in Orchestrator", url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/environment-variables" }
-				  ]
-				},
-				{
-				  title: "3.8 AI Center Basics",
-				  expLabel: "Explanation:",
-				  exp: "AI Center is used to deploy and manage AI models for intelligent automation.",
-				  exLabel: "Example:",
-				  ex: "Use an AI model to classify documents before processing them.",
-				  refs: [
-					{ text: "AI Center overview", url: "https://docs.uipath.com/ai-center/automation-cloud/latest/user-guide/ai-center-overview" }
-				  ]
-				},
-				{
-				  title: "3.9 Document Understanding",
-				  expLabel: "Explanation:",
-				  exp: "Document Understanding helps read, classify, and extract data from documents such as invoices, forms, and statements.",
-				  exLabel: "Example:",
-				  ex: "Extract invoice number, invoice date, and total amount from a PDF file.",
-				  refs: [
-					{ text: "Document Understanding overview", url: "https://docs.uipath.com/document-understanding/automation-cloud/latest/user-guide/about-document-understanding" }
-				  ]
-				},
-				{
-				  title: "3.10 GPT/OpenAI Integration",
-				  expLabel: "Explanation:",
-				  exp: "GPT/OpenAI integration allows workflows to generate content, summarize text, or support natural language processing tasks.",
-				  exLabel: "Example:",
-				  ex: "Use GPT to summarize an email before saving it to Excel.",
-				  refs: [
-					{ text: "GPT/OpenAI integration in UiPath", url: "https://docs.uipath.com/ai-center/automation-cloud/latest/user-guide/openai-integration" }
-				  ]
-				},
-				{
-				  title: "3.11 Workflow Reuse",
-				  expLabel: "Explanation:",
-				  exp: "Reusable workflows are designed so that common steps can be used across multiple automation projects.",
-				  exLabel: "Example:",
-				  ex: "Create a separate workflow for sending notification emails and reuse it in multiple automations.",
-				  refs: [
-					{ text: "Reusable workflows", url: "https://docs.uipath.com/studiox/automation-cloud/latest/user-guide/reusable-workflows" }
-				  ]
-				},
-				{
-				  title: "3.12 Library Usage",
-				  expLabel: "Explanation:",
-				  exp: "A library is a collection of reusable components or workflows that helps standardize development and save time.",
-				  exLabel: "Example:",
-				  ex: "Create a library containing standard file-processing steps for other projects to reuse.",
-				  refs: [
-					{ text: "Libraries in UiPath", url: "https://docs.uipath.com/studio/automation-cloud/latest/user-guide/about-libraries" }
-				  ]
-				}
+			    {
+			      title: "4.1 Operational Readiness",
+			      expLabel: "Explanation:",
+			      exp: "Prepare automation for execution by checking inputs, processing periods, paths, applications, and recipients. Use a checklist to confirm prerequisites and ensure the data is suitable for the process.",
+			      exLabel: "Example:",
+			      ex: "Before running a monthly report, confirm the source file covers the correct period, required columns exist, the output folder is accessible, and recipients are verified.",
+			      refs: [
+			        {
+			          text: "Orchestrator — About Processes",
+			          url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/about-processes"
+			        },
+			        {
+			          text: "Orchestrator — About Jobs",
+			          url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/about-jobs"
+			        }
+			      ]
+			    },
+			    {
+			      title: "4.2 Release and Version Tracking",
+			      expLabel: "Explanation:",
+			      exp: "Identify the package, operational version, and changes to the automation. Track release information, record verification results, and confirm the appropriate version before use.",
+			      exLabel: "Example:",
+			      ex: "A new reporting release adds empty-data checks. Record the change, verify a sample report, and update the version information in the operating instructions.",
+			      refs: [
+			        {
+			          text: "Orchestrator — Managing Packages",
+			          url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/managing-packages"
+			        },
+			        {
+			          text: "Orchestrator — Managing Processes",
+			          url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/managing-processes"
+			        }
+			      ]
+			    },
+			    {
+			      title: "4.3 Starting and Checking Automation",
+			      expLabel: "Explanation:",
+			      exp: "Start automation according to instructions and monitor execution status. Understand the relationship between processes and jobs in Orchestrator, and recognize pending, running, completed, and failed executions.",
+			      exLabel: "Example:",
+			      ex: "Start the reporting process, monitor its execution, and check the completion notification and output file.",
+			      refs: [
+			        {
+			          text: "Orchestrator — About Processes",
+			          url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/about-processes"
+			        },
+			        {
+			          text: "Orchestrator — About Jobs",
+			          url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/about-jobs"
+			        }
+			      ]
+			    },
+			    {
+			      title: "4.4 Configuration and Data Protection",
+			      expLabel: "Explanation:",
+			      exp: "Identify configuration values used by automation, such as paths, file names, and report recipients. Understand the role of assets and credential assets, use approved configuration sources, and protect credentials and business data.",
+			      exLabel: "Example:",
+			      ex: "Check the output folder and recipients in the process configuration. When recording an authentication issue, provide the necessary diagnostic information while keeping sensitive data secure.",
+			      refs: [
+			        {
+			          text: "Orchestrator — About Assets",
+			          url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/about-assets"
+			        }
+			      ]
+			    },
+			    {
+			      title: "4.5 Scheduling and Time Triggers",
+			      expLabel: "Explanation:",
+			      exp: "Identify schedules based on business needs, including execution times, time zones, and input availability. Understand how Orchestrator time triggers initiate process execution and verify results after schedules are created or changed.",
+			      exLabel: "Example:",
+			      ex: "Schedule a report for 8:00 AM after source data is finalized at 7:30 AM. Confirm the time zone, monitor the first run, and compare the execution time with the agreed schedule.",
+			      refs: [
+			        {
+			          text: "Orchestrator — Time Triggers",
+			          url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/time-triggers"
+			        },
+			        {
+			          text: "Orchestrator — About Jobs",
+			          url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/about-jobs"
+			        }
+			      ]
+			    },
+			    {
+			      title: "4.6 Monitoring and Result Reconciliation",
+			      expLabel: "Explanation:",
+			      exp: "Monitor execution status, duration, and error information. Check outputs against business criteria such as reporting periods, record counts, totals, and recipients. Use execution information and logs to support reconciliation.",
+			      exLabel: "Example:",
+			      ex: "After reporting completes, reconcile 100 input records with 95 successful records and 5 records rejected according to the rules. Check rejection reasons and confirm the reporting period.",
+			      refs: [
+			        {
+			          text: "Orchestrator — About Jobs",
+			          url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/about-jobs"
+			        },
+			        {
+			          text: "Orchestrator — Robot Logs",
+			          url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/robot-logs"
+			        }
+			      ]
+			    },
+			    {
+			      title: "4.7 Incident Handling and Safe Rerun",
+			      expLabel: "Explanation:",
+			      exp: "Record the automation name, execution time, error message, and completed work. Use processing status and operating instructions to select the next action, prepare a rerun, or send incident information to the owner.",
+			      exLabel: "Example:",
+			      ex: "The process stops after sending some report emails. Check the sent list, record the remaining work, and confirm the continuation plan according to the operating instructions.",
+			      refs: [
+			        {
+			          text: "Orchestrator — About Jobs",
+			          url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/about-jobs"
+			        },
+			        {
+			          text: "Orchestrator — Robot Logs",
+			          url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/robot-logs"
+			        }
+			      ]
+			    },
+			    {
+			      title: "4.8 Operational Handover and Change Records",
+			      expLabel: "Explanation:",
+			      exp: "Create operating instructions covering the purpose, inputs, outputs, prerequisites, execution steps, result checks, and support contacts. Record versions, changes, and verification results so the recipient can use the automation consistently.",
+			      exLabel: "Example:",
+			      ex: "Hand over the reporting process using a short guide and checklist. When the source-file structure changes, update the records, document verification results, and revise the relevant instructions.",
+			      refs: [
+			        {
+			          text: "Orchestrator — Managing Packages",
+			          url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/managing-packages"
+			        },
+			        {
+			          text: "Orchestrator — Managing Processes",
+			          url: "https://docs.uipath.com/orchestrator/automation-cloud/latest/user-guide/managing-processes"
+			        }
+			      ]
+			    }
 			  ]
 			},
 		  5: {
